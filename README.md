@@ -1,6 +1,8 @@
 # kge-impact
 This repository contains the supporting code and data files for our experiment. 
 
+The trained KGE Models using the datasets in this repository can be found at: https://doi.org/10.5281/zenodo.10296229
+
 # code
 The scripts found in this directory were developed using `Python 3.7.9`, `3.9.x`, and `3.10.x`. Researchers may need to adjust the scripts to appropriately point to the correct directories.
 
