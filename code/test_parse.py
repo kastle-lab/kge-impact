@@ -1,3 +1,7 @@
+import os
+dirPath = os.path.dirname(os.path.abspath(__file__))
+print(dirPath) 
+filePath = ""
 testFile = open("test.txt","r")
 
 head = open("head.txt", "w")

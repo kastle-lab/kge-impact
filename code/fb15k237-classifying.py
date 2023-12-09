@@ -82,7 +82,7 @@ def bind_mid2relation(file):
             entities.add(rhs)
 
             output.write(f"{lhs}\t{p}\t{rhs}\n") # re-write data file 
-    with open(os.path.join(data_path, f"{name}-entities.txt"), "w") as outputF:
+    with open(os.path.join(output_path, f"{name}-entities.txt"), "w") as outputF:
         for entity in entities:
             outputF.write(f"{entity.strip()}\n") # create list of unique entities
 
