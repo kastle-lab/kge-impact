@@ -18,16 +18,36 @@ import json
 
 #  Directory pathing, might need modifications pending where script is ran
 home_dir = os.getcwd()
-dataset="kastle_FB15k237"
-data_path = os.path.join(home_dir,f"datasets/{dataset}")
-
+dataset="fb15k-237" 
+data_path = os.path.join(home_dir,f"dataset/{dataset}")
 FILES = ["train.txt", "test.txt", "valid.txt"]
-isSco = False # being lazy between two dataset variants
+isSco = True # if False, generate fb15k-238, else generate fb15k-239
+appendName = ""
+if(isSco):
+    appendName = "239"
+else:
+    appendName = "238"
+
+dirName = f"fb15k-{appendName}"
+output_path = os.path.join(home_dir, f"dataset/{dirName}")
 
 def generate_mid2qid_dict():
+    '''
+    generate_mid2qid_dict
+
+    Utilizes a label text file consisting of MIDs that can be queryable as QIDs 
+    from Wikidata to generate a helper dictionary 
+
+    Pre-conditions:
+    - The variable data_path is defined and points to a valid directory.
+
+    Post-conditions:
+    - Creates a new dictionary with key values represented as Freebase MIDs pointing to
+      a unique Wikidata QID value
+    '''
     global mid2qid_dict
     mid2qid_dict = dict()
-    with open(os.path.join(data_path, "decoded_entity_mids.txt"), "r") as inp:
+    with open(os.path.join(data_path, "entity-labels.txt"), "r") as inp:
         lines = [line.strip() for line in inp.readlines()]
     for line in lines:
         mid, _, qid = line.split("\t")
@@ -43,13 +63,13 @@ def bind_mid2relation(file):
 
     Post-conditions:
     - Creates a new file named "{name}-entities.txt" to store unique MID values
-    - Appends "{name}-bound.txt" with FB15k-237's existing Entity-to-Entity relationship
+    - Appends generating output file with FB15k-237's existing Entity-to-Entity relationship
       with a simplified Granular Predicate
     '''
     filename = file.replace(".txt","")
     name = filename        
     if(not isSco):
-        name = f"{filename}-typed"
+        name = f"{filename}-{appendName}"
 
     with open(os.path.join(data_path, file), "r") as dataFile:
         dataLines = [line for line in dataFile.readlines()]
@@ -60,9 +80,8 @@ def bind_mid2relation(file):
             preds.add(p)
             entities.add(lhs)
             entities.add(rhs)
-            tokens = p.split("/")
-            # granular_pred = tokens[-1]
-            output.write(f"{lhs}\t{p}\t{rhs}\n") # re-write data file with granular predicate
+
+            output.write(f"{lhs}\t{p}\t{rhs}\n") # re-write data file 
     with open(os.path.join(data_path, f"{name}-entities.txt"), "w") as outputF:
         for entity in entities:
             outputF.write(f"{entity.strip()}\n") # create list of unique entities
@@ -77,13 +96,12 @@ def bind_entityType(file):
 
     Post-conditions:
     - Creates a new file named "{name}-log.txt" to store any error in the function process
-    - Appends "{name}-bound.txt" with WikiData's QID property to explicitly describe
+    - Appends generating output file with WikiData's QID property to explicitly describe
       Entity Types and the Type's respective Subclass relationships
     '''
     filename = file.replace(".txt","")
-    name = filename
-    if(not isSco):
-        name = f"{filename}-typed"
+    
+    name = f"{filename}-{appendName}"
     err = open(os.path.join(data_path,f"{name}-log.txt"), "w")
     with open(os.path.join(data_path, f"{name}-entities.txt"), "r") as entityFile:
         entityMIDs = [ line.strip() for line in entityFile.readlines()]
@@ -104,11 +122,11 @@ def bind_entityType(file):
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             '''
 
-            if(isSco):
+            if(isSco): # Select subclass of relationship in query
                 query +='''
                 Select ?e ?iOf ?sco
                 '''
-            else:
+            else: # Select without sco in query
                 query +='''
                 Select ?e ?iOf
                 '''
@@ -196,16 +214,14 @@ def bind_entityType(file):
 import datetime 
 def main():
     for f in FILES:
-        filename = f.replace(".txt","")
-        name = filename        
-        if(not isSco):
-            name = f"{filename}-typed"
-        generate_mid2qid_dict()
         global output
-        output = open(os.path.join(data_path, f"{name}-bound.txt"), "w") 
+        filename = f.replace(".txt","")
+        name = f"{filename}-{appendName}"
+        generate_mid2qid_dict()
+        output = open(os.path.join(output_path, f"{name}.txt"), "w") 
         bind_mid2relation(f)
         start = datetime.datetime.now() 
-        bind_entityType(f)
+        # bind_entityType(f)
         end = datetime.datetime.now()
         t = end-start
         print(f"Total run: {t}")
