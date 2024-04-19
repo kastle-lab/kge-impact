@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-#SBATCH --job-name=graph_metrics__fb15k23x  #for tracking job name
-#SBATCH --partition=p100      #what type of compute node you need
+#SBATCH --job-name=graph_metrics_train_fb15k23x  #for tracking job name
+#SBATCH --partition=a100      #what type of compute node you need
 #SBATCH --gres=gpu:1          #how many GPU's needed on that node (only one availabe on each a100)
 #SBATCH --mem-per-cpu=20GB
 #SBATCH --output=/home/w011bdd/kge-impact/code/output/%x-%u-%j.out  #specify output file in users home directory

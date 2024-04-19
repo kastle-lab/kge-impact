@@ -8,10 +8,11 @@ import matplotlib.pyplot as plt
 input_path = "../dataset"
 output_path = "./output"
 #dataset="fb15k-237"
-#dataset="fb15k-238"
-dataset="fb15k-239" 
+dataset="fb15k-238"
+#dataset="fb15k-239"
+trainOrTest="train"
 data_path = os.path.join(input_path,f"{dataset}")
-data_file = os.path.join(data_path, "test.txt")
+data_file = os.path.join(data_path, "train.txt")
 print(data_path)
 
 # Parse h,r,t from dataset file
@@ -47,7 +48,7 @@ labels = nx.get_edge_attributes(netx_g, 'label')
 
 ## Degree of Centrality
 degree_centrality = nx.degree_centrality(netx_g)
-with open(os.path.join(output_path, f"{dataset}-deg-centrality.out"), "w") as out:
+with open(os.path.join(output_path, f"{dataset}-{trainOrTest}-deg-centrality.out"), "w") as out:
     for node, centrality in degree_centrality.items():
         out.write(f'{node}: Degree Centrality = {centrality:.6f}\n')
         print(f'{node}: Degree Centrality = {centrality:.6f}')
@@ -55,14 +56,14 @@ with open(os.path.join(output_path, f"{dataset}-deg-centrality.out"), "w") as ou
 
 ## Betweenness
 betweenness_centrality = nx.betweenness_centrality(netx_g)
-with open(os.path.join(output_path, f"{dataset}-betweenness.out"), "w") as out:
+with open(os.path.join(output_path, f"{dataset}-{trainOrTest}-betweenness.out"), "w") as out:
     for node, centrality in betweenness_centrality.items():
         out.write(f'Betweenness Centrality of {node}: {centrality:.4f}\n')
         print(f'Betweenness Centrality of {node}: {centrality:.4f}')
 
 ## Node Closeness
 closeness_centrality = nx.closeness_centrality(netx_g)
-with open(os.path.join(output_path, f"{dataset}-node-closeness.out"), "w") as out:
+with open(os.path.join(output_path, f"{dataset}-{trainOrTest}-node-closeness.out"), "w") as out:
     for node, centrality in closeness_centrality.items():
         out.write(f'Closeness Centrality of {node}: {centrality:.4f}\n')
         print(f'Closeness Centrality of {node}: {centrality:.4f}')
