@@ -6,8 +6,10 @@ import matplotlib.pyplot as plt
 
 #  Directory pathing, might need modifications pending where script is ran
 input_path = "../dataset"
-dataset="fb15k-238"
-# dataset="fb15k-239" 
+output_path = "./output"
+#dataset="fb15k-237"
+#dataset="fb15k-238"
+dataset="fb15k-239" 
 data_path = os.path.join(input_path,f"{dataset}")
 data_file = os.path.join(data_path, "test.txt")
 print(data_path)
@@ -23,7 +25,7 @@ with open(data_file, "r") as inp:
 # Create NetworkX Graph
 netx_g = nx.Graph()
 
-for line in lines[0:100]:
+for line in lines:
     h, r, t = line.split("\t")
     netx_g.add_edge(h, t, label=r)
     
@@ -45,17 +47,23 @@ labels = nx.get_edge_attributes(netx_g, 'label')
 
 ## Degree of Centrality
 degree_centrality = nx.degree_centrality(netx_g)
-for node, centrality in degree_centrality.items():
-    print(f'{node}: Degree Centrality = {centrality:.6f}')
+with open(os.path.join(output_path, f"{dataset}-deg-centrality.out"), "w") as out:
+    for node, centrality in degree_centrality.items():
+        out.write(f'{node}: Degree Centrality = {centrality:.6f}\n')
+        print(f'{node}: Degree Centrality = {centrality:.6f}')
 
 
 ## Betweenness
 betweenness_centrality = nx.betweenness_centrality(netx_g)
-for node, centrality in betweenness_centrality.items():
-    print(f'Betweenness Centrality of {node}: {centrality:.4f}')
+with open(os.path.join(output_path, f"{dataset}-betweenness.out"), "w") as out:
+    for node, centrality in betweenness_centrality.items():
+        out.write(f'Betweenness Centrality of {node}: {centrality:.4f}\n')
+        print(f'Betweenness Centrality of {node}: {centrality:.4f}')
 
 ## Node Closeness
 closeness_centrality = nx.closeness_centrality(netx_g)
-for node, centrality in closeness_centrality.items():
-    print(f'Closeness Centrality of {node}: {centrality:.4f}')
+with open(os.path.join(output_path, f"{dataset}-node-closeness.out"), "w") as out:
+    for node, centrality in closeness_centrality.items():
+        out.write(f'Closeness Centrality of {node}: {centrality:.4f}\n')
+        print(f'Closeness Centrality of {node}: {centrality:.4f}')
 
