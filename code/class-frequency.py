@@ -4,44 +4,78 @@ import matplotlib.pyplot as plt
 
 input_path = "../dataset/ablation"
 output_path = "../graph-metrics"
-q_values = {}
+show_plot = False
+top_n = 100	# To be usd for top-n to plot and display in analysis
 
-# Reads through the iOf-test file and finds all the Q-values.
-with open(os.path.join(input_path, "iOf-test.txt"), 'r') as file:
-  for line in file:
-    matches = re.findall(r'Q(\d+)', line)
-    for match in matches:
-      if match not in q_values:
-        q_values[match] = 0
-      q_values[match] += 1
+def instanceOf_analysis(show_plot=False):
+	count_of_objects = dict()
 
-# It sorts them.
-sorted_q_values = dict(sorted(q_values.items(), key=lambda item: item[1], reverse=True))
+	with open(os.path.join(input_path, "iOf-test.txt"), 'r') as file:
+		lines = [ line for line in file.readlines() ]
+		for line in lines:
+			s, p, o = line.split('\t')
+			o = o.strip()
+			if o not in count_of_objects:
+				count_of_objects[o] = 0
+			count_of_objects[o] += 1
 
-# Top 100 used in the histogram for ease of vizualization.
-top_n = 100
+	sorted_values = dict(sorted(count_of_objects.items(), key=lambda item: item[1], reverse=True))
 
-# Saved in a dictonary to count the unique values without the Q.
-top_q_values = dict(list(sorted_q_values.items())[:top_n])
+	with open(os.path.join(output_path, "typing-count.txt"), "w") as f:
+		f.write("Entity Typing Value Counts (All):\n")
+		for q, count in sorted_values.items(): # Write sorted explicit typing counts to file
+			f.write(f"{q}: {count}\n")
 
-# Saved each variable count in the text file found in frequency folder.
-with open(os.path.join(output_path, "iOf-class-count.txt"), "w") as f:
-  f.write("Q Value Counts (All):\n")
-  for q, count in sorted_q_values.items(): # Write sorted explicit typing counts to file
-    f.write(f"Q{q}: {count}\n")
+	if(show_plot):
+		# Histogram of first 100 most frequent values.
+		top_n_values = dict(list(sorted_values.items())[:top_n])
+		q_labels = [q for q in top_n_values.keys()]
+		q_counts = list(top_n_values.values())
+
+		plt.figure(figsize=(12, 6))
+		plt.bar(q_labels, q_counts)
+		plt.xlabel('Explicit Typings')
+		plt.ylabel('Frequency')
+		plt.title(f'Top {top_n} Most Frequent Explicit Typings')
+		plt.xticks(rotation=90)
+		plt.tight_layout()
+		plt.show()
+
+def subClassOf_analysis(show_plot=False):
+	count_of_objects = dict()
+
+	with open(os.path.join(input_path, "sco-test.txt"), 'r') as file:
+		lines = [ line for line in file.readlines() ]
+		for line in lines:
+			s, p, o = line.split('\t')
+			o = o.strip()
+			if o not in count_of_objects:
+				count_of_objects[o] = 0
+			count_of_objects[o] += 1
+	
+	sorted_values = dict(sorted(count_of_objects.items(), key=lambda item: item[1], reverse=True))
+
+	with open(os.path.join(output_path, "subclass-count.txt"), "w") as f:
+		f.write("Subclass Value Counts (All):\n")
+		for q, count in sorted_values.items(): # Write sorted explicit typing counts to file
+			f.write(f"{q}: {count}\n")
+
+	if(show_plot):
+		# Histogram of first 100 most frequent values.
+		top_n_values = dict(list(sorted_values.items())[:top_n])
+		q_labels = [q for q in top_n_values.keys()]
+		q_counts = list(top_n_values.values())
+
+		plt.figure(figsize=(12, 6))
+		plt.bar(q_labels, q_counts)
+		plt.xlabel('Explicit Typings')
+		plt.ylabel('Frequency')
+		plt.title(f'Top {top_n} Most Frequent Explicit Typings')
+		plt.xticks(rotation=90)
+		plt.tight_layout()
+		plt.show()
 
 
-q_labels = ["Q" + q for q in top_q_values.keys()]
-q_counts = list(top_q_values.values())
-
-# Histogram of first 100 most frequent values.
-plt.figure(figsize=(12, 6))
-
-
-plt.bar(q_labels, q_counts)
-plt.xlabel('Explicit Typings')
-plt.ylabel('Frequency')
-plt.title(f'Top {top_n} Most Frequent Explicit Typings')
-plt.xticks(rotation=90)
-plt.tight_layout()
-plt.show()
+if __name__ == "__main__":
+	instanceOf_analysis(show_plot)
+	subClassOf_analysis(show_plot)
