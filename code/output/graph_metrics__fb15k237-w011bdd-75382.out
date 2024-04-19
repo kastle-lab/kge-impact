@@ -1,0 +1,842 @@
+../dataset/fb15k-238
+Total Number of Facts: 35257
+Number of nodes: 184
+Number of edges: 100
+Ratio edges to nodes: 0.54
+/m/08966: Degree Centrality = 0.005464
+/m/05lf_
+: Degree Centrality = 0.005464
+/m/01hww_: Degree Centrality = 0.005464
+/m/01q99h
+: Degree Centrality = 0.005464
+/m/09v3jyg: Degree Centrality = 0.005464
+/m/0f8l9c
+: Degree Centrality = 0.005464
+/m/02jx1: Degree Centrality = 0.010929
+/m/013t85
+: Degree Centrality = 0.005464
+/m/0m0bj
+: Degree Centrality = 0.005464
+/m/02bfmn: Degree Centrality = 0.005464
+/m/04ghz4m
+: Degree Centrality = 0.005464
+/m/05zrvfd: Degree Centrality = 0.005464
+/m/04y9mm8
+: Degree Centrality = 0.005464
+/m/060bp: Degree Centrality = 0.005464
+/m/04j53
+: Degree Centrality = 0.005464
+/m/07l450: Degree Centrality = 0.005464
+/m/082gq
+: Degree Centrality = 0.005464
+/m/07h1h5: Degree Centrality = 0.005464
+/m/029q3k
+: Degree Centrality = 0.005464
+/m/0djb3vw: Degree Centrality = 0.005464
+/m/0jgd
+: Degree Centrality = 0.005464
+/m/031y2: Degree Centrality = 0.005464
+/m/0dxmyh
+: Degree Centrality = 0.005464
+/m/01d8l: Degree Centrality = 0.005464
+/m/02lq67
+: Degree Centrality = 0.005464
+/m/0ydpd: Degree Centrality = 0.005464
+/m/02hcv8
+: Degree Centrality = 0.010929
+/m/0738b8: Degree Centrality = 0.005464
+/m/02xry
+: Degree Centrality = 0.005464
+/m/070xg: Degree Centrality = 0.005464
+/m/01g5v
+: Degree Centrality = 0.005464
+/m/0mwk9: Degree Centrality = 0.005464
+/m/09nqf
+: Degree Centrality = 0.010929
+/m/09306z: Degree Centrality = 0.005464
+/m/0sxkh
+: Degree Centrality = 0.005464
+/m/0kbws: Degree Centrality = 0.010929
+/m/027jk
+: Degree Centrality = 0.005464
+/m/04vjh
+: Degree Centrality = 0.005464
+/m/017j69: Degree Centrality = 0.005464
+/m/01mkq
+: Degree Centrality = 0.005464
+/m/07z1m: Degree Centrality = 0.005464
+/m/0631_
+: Degree Centrality = 0.005464
+/m/03gqgt3: Degree Centrality = 0.005464
+/m/0d060g
+: Degree Centrality = 0.005464
+/m/01c9f2: Degree Centrality = 0.010929
+/m/01bx35
+: Degree Centrality = 0.005464
+/m/01s695
+: Degree Centrality = 0.005464
+/m/01lp8: Degree Centrality = 0.005464
+/m/04n6k
+: Degree Centrality = 0.005464
+/m/01xwqn: Degree Centrality = 0.005464
+/m/0121rx
+: Degree Centrality = 0.005464
+/m/065ym0c: Degree Centrality = 0.005464
+/m/07ssc
+: Degree Centrality = 0.016393
+/m/06kxk2: Degree Centrality = 0.005464
+/m/01_d4
+: Degree Centrality = 0.005464
+/m/08q1tg: Degree Centrality = 0.005464
+/m/0lcx
+: Degree Centrality = 0.005464
+/m/037fqp: Degree Centrality = 0.005464
+/m/04399
+: Degree Centrality = 0.005464
+/m/0xxc: Degree Centrality = 0.005464
+/m/01lj9
+: Degree Centrality = 0.005464
+/m/01l_pn: Degree Centrality = 0.005464
+/m/01y9jr
+: Degree Centrality = 0.005464
+/m/09sdmz: Degree Centrality = 0.010929
+/m/09gq0x5
+: Degree Centrality = 0.005464
+/m/011yn5
+: Degree Centrality = 0.005464
+/m/02ghq: Degree Centrality = 0.005464
+/m/01d_h8
+: Degree Centrality = 0.010929
+/m/016tt2: Degree Centrality = 0.016393
+/m/0dtfn
+: Degree Centrality = 0.005464
+/m/04zl8
+: Degree Centrality = 0.005464
+/m/01gb54
+: Degree Centrality = 0.005464
+/m/07jrjb: Degree Centrality = 0.005464
+/m/0ckd1
+: Degree Centrality = 0.005464
+/m/09v71cj: Degree Centrality = 0.005464
+/m/015fr
+: Degree Centrality = 0.005464
+/m/01k5y0: Degree Centrality = 0.005464
+/m/0dky9n
+: Degree Centrality = 0.005464
+/m/06x76: Degree Centrality = 0.005464
+/m/0jm_
+: Degree Centrality = 0.005464
+/m/0x67: Degree Centrality = 0.010929
+/m/0411q
+: Degree Centrality = 0.005464
+/m/030wkp
+: Degree Centrality = 0.005464
+/m/0gmgwnv: Degree Centrality = 0.005464
+/m/01wkmgb: Degree Centrality = 0.005464
+/m/09jwl
+: Degree Centrality = 0.005464
+/m/0154j: Degree Centrality = 0.005464
+/m/04k4l
+: Degree Centrality = 0.005464
+/m/02j4sk: Degree Centrality = 0.005464
+/m/027l4q
+: Degree Centrality = 0.005464
+/m/017jv5: Degree Centrality = 0.005464
+/m/0d1qmz
+: Degree Centrality = 0.005464
+/m/02x2gy0: Degree Centrality = 0.005464
+/m/04jplwp
+: Degree Centrality = 0.005464
+/m/053rxgm: Degree Centrality = 0.005464
+/m/0g_rs_
+: Degree Centrality = 0.005464
+/m/011k11: Degree Centrality = 0.005464
+/m/03h_yfh
+: Degree Centrality = 0.005464
+/m/014zfs: Degree Centrality = 0.005464
+/m/0bdw6t
+: Degree Centrality = 0.005464
+/m/05typm: Degree Centrality = 0.005464
+/m/0k2cb
+: Degree Centrality = 0.005464
+/m/0cwy47: Degree Centrality = 0.005464
+/m/06c62
+: Degree Centrality = 0.005464
+/m/019vhk: Degree Centrality = 0.005464
+/m/09rwjly
+: Degree Centrality = 0.005464
+/m/06sy4c: Degree Centrality = 0.005464
+/m/05zppz
+: Degree Centrality = 0.005464
+/m/0dr1c2: Degree Centrality = 0.005464
+/m/04f62k
+: Degree Centrality = 0.005464
+/m/07b_l: Degree Centrality = 0.005464
+/m/013m43
+: Degree Centrality = 0.005464
+/m/0mm1q: Degree Centrality = 0.005464
+/m/0prjs: Degree Centrality = 0.005464
+/m/062zjtt
+: Degree Centrality = 0.005464
+/m/01v40wd: Degree Centrality = 0.005464
+/m/01c9dd
+: Degree Centrality = 0.005464
+/m/0kvgnq: Degree Centrality = 0.005464
+/m/05dppk
+: Degree Centrality = 0.005464
+/m/01ckbq: Degree Centrality = 0.005464
+/m/013b2h
+: Degree Centrality = 0.005464
+/m/0f_nbyh: Degree Centrality = 0.005464
+/m/07yk1xz
+: Degree Centrality = 0.005464
+/m/0418wg: Degree Centrality = 0.005464
+/m/02bjrlw
+: Degree Centrality = 0.005464
+/m/02kth6: Degree Centrality = 0.005464
+/m/03z19
+: Degree Centrality = 0.005464
+/m/026c1: Degree Centrality = 0.005464
+/m/03s6l2
+: Degree Centrality = 0.005464
+/m/03j90: Degree Centrality = 0.005464
+/m/05z96
+: Degree Centrality = 0.005464
+/m/0p9sw: Degree Centrality = 0.005464
+/m/02zk08
+: Degree Centrality = 0.005464
+/m/01hydr: Degree Centrality = 0.005464
+/m/0kz10
+: Degree Centrality = 0.005464
+/m/01gtc0: Degree Centrality = 0.005464
+/m/0vbk
+: Degree Centrality = 0.005464
+/m/0h63gl9: Degree Centrality = 0.005464
+/m/033cnk: Degree Centrality = 0.010929
+/m/0f4hc
+: Degree Centrality = 0.005464
+/m/02y_3rf
+: Degree Centrality = 0.005464
+/m/084m3: Degree Centrality = 0.005464
+/m/034qrh
+: Degree Centrality = 0.005464
+/m/014mlp: Degree Centrality = 0.005464
+/m/01x5fb
+: Degree Centrality = 0.005464
+/m/0b7l4x: Degree Centrality = 0.005464
+/m/03sb38
+: Degree Centrality = 0.005464
+/m/016yvw: Degree Centrality = 0.005464
+/m/01g63y
+: Degree Centrality = 0.005464
+/m/06ltr: Degree Centrality = 0.005464
+/m/016ywb
+: Degree Centrality = 0.005464
+/m/01dq5z: Degree Centrality = 0.005464
+/m/03q95r
+: Degree Centrality = 0.005464
+/m/02vwckw: Degree Centrality = 0.005464
+/m/0n1h
+: Degree Centrality = 0.005464
+/m/049t4g: Degree Centrality = 0.005464
+/m/09sb52
+: Degree Centrality = 0.005464
+/m/08k881: Degree Centrality = 0.005464
+/m/01qncf
+: Degree Centrality = 0.005464
+/m/01w58n3: Degree Centrality = 0.005464
+/m/016z4k
+: Degree Centrality = 0.005464
+/m/0h_cssd: Degree Centrality = 0.005464
+/m/0h0wc
+: Degree Centrality = 0.005464
+/m/06by7: Degree Centrality = 0.005464
+/m/0153nq
+: Degree Centrality = 0.005464
+/m/01wxdn3: Degree Centrality = 0.010929
+/m/011_6p
+: Degree Centrality = 0.005464
+/m/03g5jw: Degree Centrality = 0.005464
+/m/014_lq
+: Degree Centrality = 0.005464
+/m/02m97n: Degree Centrality = 0.005464
+/m/09bkv
+: Degree Centrality = 0.005464
+/m/07y9k: Degree Centrality = 0.005464
+/m/035s37
+: Degree Centrality = 0.005464
+/m/06c97: Degree Centrality = 0.005464
+/m/05f4p
+: Degree Centrality = 0.005464
+/m/01cwhp: Degree Centrality = 0.010929
+/m/02f79n
+: Degree Centrality = 0.005464
+/m/05zkcn5
+: Degree Centrality = 0.005464
+/m/02xry: Degree Centrality = 0.010929
+/m/01y0s9
+: Degree Centrality = 0.005464
+/m/018dh3: Degree Centrality = 0.005464
+/m/08mbj5d
+: Degree Centrality = 0.005464
+/m/099c8n: Degree Centrality = 0.005464
+/m/064lsn
+: Degree Centrality = 0.005464
+Betweenness Centrality of /m/08966: 0.0000
+Betweenness Centrality of /m/05lf_
+: 0.0000
+Betweenness Centrality of /m/01hww_: 0.0000
+Betweenness Centrality of /m/01q99h
+: 0.0000
+Betweenness Centrality of /m/09v3jyg: 0.0000
+Betweenness Centrality of /m/0f8l9c
+: 0.0000
+Betweenness Centrality of /m/02jx1: 0.0001
+Betweenness Centrality of /m/013t85
+: 0.0000
+Betweenness Centrality of /m/0m0bj
+: 0.0000
+Betweenness Centrality of /m/02bfmn: 0.0000
+Betweenness Centrality of /m/04ghz4m
+: 0.0000
+Betweenness Centrality of /m/05zrvfd: 0.0000
+Betweenness Centrality of /m/04y9mm8
+: 0.0000
+Betweenness Centrality of /m/060bp: 0.0000
+Betweenness Centrality of /m/04j53
+: 0.0000
+Betweenness Centrality of /m/07l450: 0.0000
+Betweenness Centrality of /m/082gq
+: 0.0000
+Betweenness Centrality of /m/07h1h5: 0.0000
+Betweenness Centrality of /m/029q3k
+: 0.0000
+Betweenness Centrality of /m/0djb3vw: 0.0000
+Betweenness Centrality of /m/0jgd
+: 0.0000
+Betweenness Centrality of /m/031y2: 0.0000
+Betweenness Centrality of /m/0dxmyh
+: 0.0000
+Betweenness Centrality of /m/01d8l: 0.0000
+Betweenness Centrality of /m/02lq67
+: 0.0000
+Betweenness Centrality of /m/0ydpd: 0.0000
+Betweenness Centrality of /m/02hcv8
+: 0.0001
+Betweenness Centrality of /m/0738b8: 0.0000
+Betweenness Centrality of /m/02xry
+: 0.0000
+Betweenness Centrality of /m/070xg: 0.0000
+Betweenness Centrality of /m/01g5v
+: 0.0000
+Betweenness Centrality of /m/0mwk9: 0.0000
+Betweenness Centrality of /m/09nqf
+: 0.0001
+Betweenness Centrality of /m/09306z: 0.0000
+Betweenness Centrality of /m/0sxkh
+: 0.0000
+Betweenness Centrality of /m/0kbws: 0.0001
+Betweenness Centrality of /m/027jk
+: 0.0000
+Betweenness Centrality of /m/04vjh
+: 0.0000
+Betweenness Centrality of /m/017j69: 0.0000
+Betweenness Centrality of /m/01mkq
+: 0.0000
+Betweenness Centrality of /m/07z1m: 0.0000
+Betweenness Centrality of /m/0631_
+: 0.0000
+Betweenness Centrality of /m/03gqgt3: 0.0000
+Betweenness Centrality of /m/0d060g
+: 0.0000
+Betweenness Centrality of /m/01c9f2: 0.0001
+Betweenness Centrality of /m/01bx35
+: 0.0000
+Betweenness Centrality of /m/01s695
+: 0.0000
+Betweenness Centrality of /m/01lp8: 0.0000
+Betweenness Centrality of /m/04n6k
+: 0.0000
+Betweenness Centrality of /m/01xwqn: 0.0000
+Betweenness Centrality of /m/0121rx
+: 0.0000
+Betweenness Centrality of /m/065ym0c: 0.0000
+Betweenness Centrality of /m/07ssc
+: 0.0003
+Betweenness Centrality of /m/06kxk2: 0.0000
+Betweenness Centrality of /m/01_d4
+: 0.0000
+Betweenness Centrality of /m/08q1tg: 0.0000
+Betweenness Centrality of /m/0lcx
+: 0.0000
+Betweenness Centrality of /m/037fqp: 0.0000
+Betweenness Centrality of /m/04399
+: 0.0000
+Betweenness Centrality of /m/0xxc: 0.0000
+Betweenness Centrality of /m/01lj9
+: 0.0000
+Betweenness Centrality of /m/01l_pn: 0.0000
+Betweenness Centrality of /m/01y9jr
+: 0.0000
+Betweenness Centrality of /m/09sdmz: 0.0001
+Betweenness Centrality of /m/09gq0x5
+: 0.0000
+Betweenness Centrality of /m/011yn5
+: 0.0000
+Betweenness Centrality of /m/02ghq: 0.0000
+Betweenness Centrality of /m/01d_h8
+: 0.0001
+Betweenness Centrality of /m/016tt2: 0.0002
+Betweenness Centrality of /m/0dtfn
+: 0.0000
+Betweenness Centrality of /m/04zl8
+: 0.0000
+Betweenness Centrality of /m/01gb54
+: 0.0000
+Betweenness Centrality of /m/07jrjb: 0.0000
+Betweenness Centrality of /m/0ckd1
+: 0.0000
+Betweenness Centrality of /m/09v71cj: 0.0000
+Betweenness Centrality of /m/015fr
+: 0.0000
+Betweenness Centrality of /m/01k5y0: 0.0000
+Betweenness Centrality of /m/0dky9n
+: 0.0000
+Betweenness Centrality of /m/06x76: 0.0000
+Betweenness Centrality of /m/0jm_
+: 0.0000
+Betweenness Centrality of /m/0x67: 0.0001
+Betweenness Centrality of /m/0411q
+: 0.0000
+Betweenness Centrality of /m/030wkp
+: 0.0000
+Betweenness Centrality of /m/0gmgwnv: 0.0000
+Betweenness Centrality of /m/01wkmgb: 0.0000
+Betweenness Centrality of /m/09jwl
+: 0.0000
+Betweenness Centrality of /m/0154j: 0.0000
+Betweenness Centrality of /m/04k4l
+: 0.0000
+Betweenness Centrality of /m/02j4sk: 0.0000
+Betweenness Centrality of /m/027l4q
+: 0.0000
+Betweenness Centrality of /m/017jv5: 0.0000
+Betweenness Centrality of /m/0d1qmz
+: 0.0000
+Betweenness Centrality of /m/02x2gy0: 0.0000
+Betweenness Centrality of /m/04jplwp
+: 0.0000
+Betweenness Centrality of /m/053rxgm: 0.0000
+Betweenness Centrality of /m/0g_rs_
+: 0.0000
+Betweenness Centrality of /m/011k11: 0.0000
+Betweenness Centrality of /m/03h_yfh
+: 0.0000
+Betweenness Centrality of /m/014zfs: 0.0000
+Betweenness Centrality of /m/0bdw6t
+: 0.0000
+Betweenness Centrality of /m/05typm: 0.0000
+Betweenness Centrality of /m/0k2cb
+: 0.0000
+Betweenness Centrality of /m/0cwy47: 0.0000
+Betweenness Centrality of /m/06c62
+: 0.0000
+Betweenness Centrality of /m/019vhk: 0.0000
+Betweenness Centrality of /m/09rwjly
+: 0.0000
+Betweenness Centrality of /m/06sy4c: 0.0000
+Betweenness Centrality of /m/05zppz
+: 0.0000
+Betweenness Centrality of /m/0dr1c2: 0.0000
+Betweenness Centrality of /m/04f62k
+: 0.0000
+Betweenness Centrality of /m/07b_l: 0.0000
+Betweenness Centrality of /m/013m43
+: 0.0000
+Betweenness Centrality of /m/0mm1q: 0.0000
+Betweenness Centrality of /m/0prjs: 0.0000
+Betweenness Centrality of /m/062zjtt
+: 0.0000
+Betweenness Centrality of /m/01v40wd: 0.0000
+Betweenness Centrality of /m/01c9dd
+: 0.0000
+Betweenness Centrality of /m/0kvgnq: 0.0000
+Betweenness Centrality of /m/05dppk
+: 0.0000
+Betweenness Centrality of /m/01ckbq: 0.0000
+Betweenness Centrality of /m/013b2h
+: 0.0000
+Betweenness Centrality of /m/0f_nbyh: 0.0000
+Betweenness Centrality of /m/07yk1xz
+: 0.0000
+Betweenness Centrality of /m/0418wg: 0.0000
+Betweenness Centrality of /m/02bjrlw
+: 0.0000
+Betweenness Centrality of /m/02kth6: 0.0000
+Betweenness Centrality of /m/03z19
+: 0.0000
+Betweenness Centrality of /m/026c1: 0.0000
+Betweenness Centrality of /m/03s6l2
+: 0.0000
+Betweenness Centrality of /m/03j90: 0.0000
+Betweenness Centrality of /m/05z96
+: 0.0000
+Betweenness Centrality of /m/0p9sw: 0.0000
+Betweenness Centrality of /m/02zk08
+: 0.0000
+Betweenness Centrality of /m/01hydr: 0.0000
+Betweenness Centrality of /m/0kz10
+: 0.0000
+Betweenness Centrality of /m/01gtc0: 0.0000
+Betweenness Centrality of /m/0vbk
+: 0.0000
+Betweenness Centrality of /m/0h63gl9: 0.0000
+Betweenness Centrality of /m/033cnk: 0.0001
+Betweenness Centrality of /m/0f4hc
+: 0.0000
+Betweenness Centrality of /m/02y_3rf
+: 0.0000
+Betweenness Centrality of /m/084m3: 0.0000
+Betweenness Centrality of /m/034qrh
+: 0.0000
+Betweenness Centrality of /m/014mlp: 0.0000
+Betweenness Centrality of /m/01x5fb
+: 0.0000
+Betweenness Centrality of /m/0b7l4x: 0.0000
+Betweenness Centrality of /m/03sb38
+: 0.0000
+Betweenness Centrality of /m/016yvw: 0.0000
+Betweenness Centrality of /m/01g63y
+: 0.0000
+Betweenness Centrality of /m/06ltr: 0.0000
+Betweenness Centrality of /m/016ywb
+: 0.0000
+Betweenness Centrality of /m/01dq5z: 0.0000
+Betweenness Centrality of /m/03q95r
+: 0.0000
+Betweenness Centrality of /m/02vwckw: 0.0000
+Betweenness Centrality of /m/0n1h
+: 0.0000
+Betweenness Centrality of /m/049t4g: 0.0000
+Betweenness Centrality of /m/09sb52
+: 0.0000
+Betweenness Centrality of /m/08k881: 0.0000
+Betweenness Centrality of /m/01qncf
+: 0.0000
+Betweenness Centrality of /m/01w58n3: 0.0000
+Betweenness Centrality of /m/016z4k
+: 0.0000
+Betweenness Centrality of /m/0h_cssd: 0.0000
+Betweenness Centrality of /m/0h0wc
+: 0.0000
+Betweenness Centrality of /m/06by7: 0.0000
+Betweenness Centrality of /m/0153nq
+: 0.0000
+Betweenness Centrality of /m/01wxdn3: 0.0002
+Betweenness Centrality of /m/011_6p
+: 0.0000
+Betweenness Centrality of /m/03g5jw: 0.0000
+Betweenness Centrality of /m/014_lq
+: 0.0000
+Betweenness Centrality of /m/02m97n: 0.0000
+Betweenness Centrality of /m/09bkv
+: 0.0000
+Betweenness Centrality of /m/07y9k: 0.0000
+Betweenness Centrality of /m/035s37
+: 0.0000
+Betweenness Centrality of /m/06c97: 0.0000
+Betweenness Centrality of /m/05f4p
+: 0.0000
+Betweenness Centrality of /m/01cwhp: 0.0001
+Betweenness Centrality of /m/02f79n
+: 0.0000
+Betweenness Centrality of /m/05zkcn5
+: 0.0000
+Betweenness Centrality of /m/02xry: 0.0001
+Betweenness Centrality of /m/01y0s9
+: 0.0000
+Betweenness Centrality of /m/018dh3: 0.0000
+Betweenness Centrality of /m/08mbj5d
+: 0.0000
+Betweenness Centrality of /m/099c8n: 0.0000
+Betweenness Centrality of /m/064lsn
+: 0.0000
+Closeness Centrality of /m/08966: 0.0055
+Closeness Centrality of /m/05lf_
+: 0.0055
+Closeness Centrality of /m/01hww_: 0.0055
+Closeness Centrality of /m/01q99h
+: 0.0055
+Closeness Centrality of /m/09v3jyg: 0.0055
+Closeness Centrality of /m/0f8l9c
+: 0.0055
+Closeness Centrality of /m/02jx1: 0.0109
+Closeness Centrality of /m/013t85
+: 0.0073
+Closeness Centrality of /m/0m0bj
+: 0.0073
+Closeness Centrality of /m/02bfmn: 0.0055
+Closeness Centrality of /m/04ghz4m
+: 0.0055
+Closeness Centrality of /m/05zrvfd: 0.0055
+Closeness Centrality of /m/04y9mm8
+: 0.0055
+Closeness Centrality of /m/060bp: 0.0055
+Closeness Centrality of /m/04j53
+: 0.0055
+Closeness Centrality of /m/07l450: 0.0055
+Closeness Centrality of /m/082gq
+: 0.0055
+Closeness Centrality of /m/07h1h5: 0.0055
+Closeness Centrality of /m/029q3k
+: 0.0055
+Closeness Centrality of /m/0djb3vw: 0.0055
+Closeness Centrality of /m/0jgd
+: 0.0055
+Closeness Centrality of /m/031y2: 0.0055
+Closeness Centrality of /m/0dxmyh
+: 0.0055
+Closeness Centrality of /m/01d8l: 0.0055
+Closeness Centrality of /m/02lq67
+: 0.0055
+Closeness Centrality of /m/0ydpd: 0.0082
+Closeness Centrality of /m/02hcv8
+: 0.0123
+Closeness Centrality of /m/0738b8: 0.0055
+Closeness Centrality of /m/02xry
+: 0.0055
+Closeness Centrality of /m/070xg: 0.0055
+Closeness Centrality of /m/01g5v
+: 0.0055
+Closeness Centrality of /m/0mwk9: 0.0073
+Closeness Centrality of /m/09nqf
+: 0.0109
+Closeness Centrality of /m/09306z: 0.0055
+Closeness Centrality of /m/0sxkh
+: 0.0055
+Closeness Centrality of /m/0kbws: 0.0109
+Closeness Centrality of /m/027jk
+: 0.0073
+Closeness Centrality of /m/04vjh
+: 0.0073
+Closeness Centrality of /m/017j69: 0.0055
+Closeness Centrality of /m/01mkq
+: 0.0055
+Closeness Centrality of /m/07z1m: 0.0055
+Closeness Centrality of /m/0631_
+: 0.0055
+Closeness Centrality of /m/03gqgt3: 0.0055
+Closeness Centrality of /m/0d060g
+: 0.0055
+Closeness Centrality of /m/01c9f2: 0.0109
+Closeness Centrality of /m/01bx35
+: 0.0073
+Closeness Centrality of /m/01s695
+: 0.0073
+Closeness Centrality of /m/01lp8: 0.0055
+Closeness Centrality of /m/04n6k
+: 0.0055
+Closeness Centrality of /m/01xwqn: 0.0055
+Closeness Centrality of /m/0121rx
+: 0.0055
+Closeness Centrality of /m/065ym0c: 0.0109
+Closeness Centrality of /m/07ssc
+: 0.0175
+Closeness Centrality of /m/06kxk2: 0.0055
+Closeness Centrality of /m/01_d4
+: 0.0055
+Closeness Centrality of /m/08q1tg: 0.0055
+Closeness Centrality of /m/0lcx
+: 0.0055
+Closeness Centrality of /m/037fqp: 0.0055
+Closeness Centrality of /m/04399
+: 0.0055
+Closeness Centrality of /m/0xxc: 0.0055
+Closeness Centrality of /m/01lj9
+: 0.0055
+Closeness Centrality of /m/01l_pn: 0.0055
+Closeness Centrality of /m/01y9jr
+: 0.0055
+Closeness Centrality of /m/09sdmz: 0.0109
+Closeness Centrality of /m/09gq0x5
+: 0.0073
+Closeness Centrality of /m/011yn5
+: 0.0073
+Closeness Centrality of /m/02ghq: 0.0073
+Closeness Centrality of /m/01d_h8
+: 0.0109
+Closeness Centrality of /m/016tt2: 0.0164
+Closeness Centrality of /m/0dtfn
+: 0.0098
+Closeness Centrality of /m/04zl8
+: 0.0098
+Closeness Centrality of /m/01gb54
+: 0.0098
+Closeness Centrality of /m/07jrjb: 0.0055
+Closeness Centrality of /m/0ckd1
+: 0.0055
+Closeness Centrality of /m/09v71cj: 0.0055
+Closeness Centrality of /m/015fr
+: 0.0055
+Closeness Centrality of /m/01k5y0: 0.0055
+Closeness Centrality of /m/0dky9n
+: 0.0055
+Closeness Centrality of /m/06x76: 0.0055
+Closeness Centrality of /m/0jm_
+: 0.0055
+Closeness Centrality of /m/0x67: 0.0109
+Closeness Centrality of /m/0411q
+: 0.0073
+Closeness Centrality of /m/030wkp
+: 0.0073
+Closeness Centrality of /m/0gmgwnv: 0.0073
+Closeness Centrality of /m/01wkmgb: 0.0055
+Closeness Centrality of /m/09jwl
+: 0.0055
+Closeness Centrality of /m/0154j: 0.0055
+Closeness Centrality of /m/04k4l
+: 0.0055
+Closeness Centrality of /m/02j4sk: 0.0055
+Closeness Centrality of /m/027l4q
+: 0.0055
+Closeness Centrality of /m/017jv5: 0.0055
+Closeness Centrality of /m/0d1qmz
+: 0.0055
+Closeness Centrality of /m/02x2gy0: 0.0055
+Closeness Centrality of /m/04jplwp
+: 0.0055
+Closeness Centrality of /m/053rxgm: 0.0055
+Closeness Centrality of /m/0g_rs_
+: 0.0055
+Closeness Centrality of /m/011k11: 0.0055
+Closeness Centrality of /m/03h_yfh
+: 0.0055
+Closeness Centrality of /m/014zfs: 0.0055
+Closeness Centrality of /m/0bdw6t
+: 0.0055
+Closeness Centrality of /m/05typm: 0.0055
+Closeness Centrality of /m/0k2cb
+: 0.0055
+Closeness Centrality of /m/0cwy47: 0.0055
+Closeness Centrality of /m/06c62
+: 0.0055
+Closeness Centrality of /m/019vhk: 0.0055
+Closeness Centrality of /m/09rwjly
+: 0.0055
+Closeness Centrality of /m/06sy4c: 0.0055
+Closeness Centrality of /m/05zppz
+: 0.0055
+Closeness Centrality of /m/0dr1c2: 0.0055
+Closeness Centrality of /m/04f62k
+: 0.0055
+Closeness Centrality of /m/07b_l: 0.0055
+Closeness Centrality of /m/013m43
+: 0.0055
+Closeness Centrality of /m/0mm1q: 0.0073
+Closeness Centrality of /m/0prjs: 0.0055
+Closeness Centrality of /m/062zjtt
+: 0.0055
+Closeness Centrality of /m/01v40wd: 0.0055
+Closeness Centrality of /m/01c9dd
+: 0.0055
+Closeness Centrality of /m/0kvgnq: 0.0055
+Closeness Centrality of /m/05dppk
+: 0.0055
+Closeness Centrality of /m/01ckbq: 0.0055
+Closeness Centrality of /m/013b2h
+: 0.0055
+Closeness Centrality of /m/0f_nbyh: 0.0055
+Closeness Centrality of /m/07yk1xz
+: 0.0055
+Closeness Centrality of /m/0418wg: 0.0055
+Closeness Centrality of /m/02bjrlw
+: 0.0055
+Closeness Centrality of /m/02kth6: 0.0055
+Closeness Centrality of /m/03z19
+: 0.0055
+Closeness Centrality of /m/026c1: 0.0055
+Closeness Centrality of /m/03s6l2
+: 0.0055
+Closeness Centrality of /m/03j90: 0.0055
+Closeness Centrality of /m/05z96
+: 0.0055
+Closeness Centrality of /m/0p9sw: 0.0055
+Closeness Centrality of /m/02zk08
+: 0.0055
+Closeness Centrality of /m/01hydr: 0.0055
+Closeness Centrality of /m/0kz10
+: 0.0055
+Closeness Centrality of /m/01gtc0: 0.0055
+Closeness Centrality of /m/0vbk
+: 0.0055
+Closeness Centrality of /m/0h63gl9: 0.0109
+Closeness Centrality of /m/033cnk: 0.0109
+Closeness Centrality of /m/0f4hc
+: 0.0073
+Closeness Centrality of /m/02y_3rf
+: 0.0073
+Closeness Centrality of /m/084m3: 0.0055
+Closeness Centrality of /m/034qrh
+: 0.0055
+Closeness Centrality of /m/014mlp: 0.0055
+Closeness Centrality of /m/01x5fb
+: 0.0055
+Closeness Centrality of /m/0b7l4x: 0.0055
+Closeness Centrality of /m/03sb38
+: 0.0055
+Closeness Centrality of /m/016yvw: 0.0055
+Closeness Centrality of /m/01g63y
+: 0.0055
+Closeness Centrality of /m/06ltr: 0.0055
+Closeness Centrality of /m/016ywb
+: 0.0055
+Closeness Centrality of /m/01dq5z: 0.0055
+Closeness Centrality of /m/03q95r
+: 0.0055
+Closeness Centrality of /m/02vwckw: 0.0055
+Closeness Centrality of /m/0n1h
+: 0.0055
+Closeness Centrality of /m/049t4g: 0.0055
+Closeness Centrality of /m/09sb52
+: 0.0055
+Closeness Centrality of /m/08k881: 0.0055
+Closeness Centrality of /m/01qncf
+: 0.0055
+Closeness Centrality of /m/01w58n3: 0.0055
+Closeness Centrality of /m/016z4k
+: 0.0055
+Closeness Centrality of /m/0h_cssd: 0.0055
+Closeness Centrality of /m/0h0wc
+: 0.0055
+Closeness Centrality of /m/06by7: 0.0055
+Closeness Centrality of /m/0153nq
+: 0.0055
+Closeness Centrality of /m/01wxdn3: 0.0146
+Closeness Centrality of /m/011_6p
+: 0.0097
+Closeness Centrality of /m/03g5jw: 0.0055
+Closeness Centrality of /m/014_lq
+: 0.0055
+Closeness Centrality of /m/02m97n: 0.0055
+Closeness Centrality of /m/09bkv
+: 0.0055
+Closeness Centrality of /m/07y9k: 0.0055
+Closeness Centrality of /m/035s37
+: 0.0055
+Closeness Centrality of /m/06c97: 0.0055
+Closeness Centrality of /m/05f4p
+: 0.0055
+Closeness Centrality of /m/01cwhp: 0.0109
+Closeness Centrality of /m/02f79n
+: 0.0073
+Closeness Centrality of /m/05zkcn5
+: 0.0073
+Closeness Centrality of /m/02xry: 0.0123
+Closeness Centrality of /m/01y0s9
+: 0.0082
+Closeness Centrality of /m/018dh3: 0.0055
+Closeness Centrality of /m/08mbj5d
+: 0.0055
+Closeness Centrality of /m/099c8n: 0.0055
+Closeness Centrality of /m/064lsn
+: 0.0055
