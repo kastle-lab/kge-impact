@@ -1,13 +1,13 @@
+import os
 import re
 import matplotlib.pyplot as plt
 
-file_path = "/Users/andreachristou/Documents/git/kge-impact/dataset/ablation/iOf-test.txt"
-
-
+input_path = "../datasets/ablation"
+output_path = "../graph-metrics"
 q_values = {}
 
 # Reads through the iOf-test file and finds all the Q-values.
-with open(file_path, 'r') as file:
+with open(os.path.join(input_path, "iOf-test.txt"), 'r') as file:
   for line in file:
     matches = re.findall(r'Q(\d+)', line)
     for match in matches:
@@ -25,7 +25,7 @@ top_n = 100
 top_q_values = dict(list(sorted_q_values.items())[:top_n])
 
 # Saved each variable count in the text file found in frequency folder.
-with open("iOf-class-count.txt", "w") as f:
+with open(os.path.join(output_path, "iOf-class-count.txt"), "w") as f:
   f.write("Q Value Counts (All):\n")
   for q, count in q_values.items():
     f.write(f"Q{q}: {count}\n")
