@@ -2,7 +2,7 @@ import os
 import re
 import matplotlib.pyplot as plt
 
-input_path = "../datasets/ablation"
+input_path = "../dataset/ablation"
 output_path = "../graph-metrics"
 q_values = {}
 
@@ -27,7 +27,7 @@ top_q_values = dict(list(sorted_q_values.items())[:top_n])
 # Saved each variable count in the text file found in frequency folder.
 with open(os.path.join(output_path, "iOf-class-count.txt"), "w") as f:
   f.write("Q Value Counts (All):\n")
-  for q, count in q_values.items():
+  for q, count in sorted_q_values.items(): # Write sorted explicit typing counts to file
     f.write(f"Q{q}: {count}\n")
 
 
@@ -39,9 +39,9 @@ plt.figure(figsize=(12, 6))
 
 
 plt.bar(q_labels, q_counts)
-plt.xlabel('Q Values')
+plt.xlabel('Explicit Typings')
 plt.ylabel('Frequency')
-plt.title(f'Top {top_n} Most Frequent Q Values')
+plt.title(f'Top {top_n} Most Frequent Explicit Typings')
 plt.xticks(rotation=90)
 plt.tight_layout()
 plt.show()
