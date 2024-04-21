@@ -1,18 +1,21 @@
 import os
+import re
 import requests
 import json
 import networkx as nx
 import matplotlib.pyplot as plt
-
+'''
+    Use NetworkX to generate graph metrics
+'''
 #  Directory pathing, might need modifications pending where script is ran
 input_path = "../dataset"
-output_path = "./output"
+output_path = "../graph-metrics/output"
 #dataset="fb15k-237"
-dataset="fb15k-238"
-#dataset="fb15k-239"
-trainOrTest="train"
+#dataset="fb15k-238"
+dataset="fb15k-239" 
+trainOrTest = "train"
 data_path = os.path.join(input_path,f"{dataset}")
-data_file = os.path.join(data_path, "train.txt")
+data_file = os.path.join(data_path, f"{trainOrTest}.txt")
 print(data_path)
 
 # Parse h,r,t from dataset file
@@ -68,3 +71,19 @@ with open(os.path.join(output_path, f"{dataset}-{trainOrTest}-node-closeness.out
         out.write(f'Closeness Centrality of {node}: {centrality:.4f}\n')
         print(f'Closeness Centrality of {node}: {centrality:.4f}')
 
+'''
+    NetworkX creates output files 
+    This script cleans the output files to have results in a single row
+'''
+##  Clean produced files with regex
+input_path = '../graph-metrics/output'
+files = os.listdir(input_path)
+
+for f_name in files:
+    file_path = os.path.join(input_path, f_name)
+    with open(file_path, "r") as inp:
+        file_text = inp.read()
+        file_text = file_text.replace("\n:", " :") # Regex finds dirty lines and moves to corresponding result
+
+    with open(file_path, "w") as out:
+        out.write(file_text)
