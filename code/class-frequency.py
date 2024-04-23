@@ -4,13 +4,14 @@ import matplotlib.pyplot as plt
 
 input_path = "../dataset/ablation"
 output_path = "../graph-metrics"
-show_plot = False
+trainOrTest = "train"
+show_plot = True
 top_n = 100	# To be usd for top-n to plot and display in analysis
 
 def instanceOf_analysis(show_plot=False):
 	count_of_objects = dict()
 
-	with open(os.path.join(input_path, "iOf-test.txt"), 'r') as file:
+	with open(os.path.join(input_path, f"iOf-{trainOrTest}.txt"), 'r') as file:
 		lines = [ line for line in file.readlines() ]
 		for line in lines:
 			s, p, o = line.split('\t')
@@ -21,7 +22,7 @@ def instanceOf_analysis(show_plot=False):
 
 	sorted_values = dict(sorted(count_of_objects.items(), key=lambda item: item[1], reverse=True))
 
-	with open(os.path.join(output_path, "typing-count.txt"), "w") as f:
+	with open(os.path.join(output_path, f"{trainOrTest}-typing-count.txt"), "w") as f:
 		f.write("Entity Typing Value Counts (All):\n")
 		for q, count in sorted_values.items(): # Write sorted explicit typing counts to file
 			f.write(f"{q}: {count}\n")
@@ -44,7 +45,7 @@ def instanceOf_analysis(show_plot=False):
 def subClassOf_analysis(show_plot=False):
 	count_of_objects = dict()
 
-	with open(os.path.join(input_path, "sco-test.txt"), 'r') as file:
+	with open(os.path.join(input_path, f"sco-{trainOrTest}.txt"), 'r') as file:
 		lines = [ line for line in file.readlines() ]
 		for line in lines:
 			s, p, o = line.split('\t')
@@ -55,7 +56,7 @@ def subClassOf_analysis(show_plot=False):
 	
 	sorted_values = dict(sorted(count_of_objects.items(), key=lambda item: item[1], reverse=True))
 
-	with open(os.path.join(output_path, "subclass-count.txt"), "w") as f:
+	with open(os.path.join(output_path, f"{trainOrTest}-subclass-count.txt"), "w") as f:
 		f.write("Subclass Value Counts (All):\n")
 		for q, count in sorted_values.items(): # Write sorted explicit typing counts to file
 			f.write(f"{q}: {count}\n")
