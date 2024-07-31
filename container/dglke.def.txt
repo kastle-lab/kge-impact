@@ -1,0 +1,24 @@
+BootStrap: docker
+From: ubuntu:22.04
+
+%post
+    apt update -y && apt upgrade -y	 
+    apt install -y software-properties-common
+    apt install -y build-essential \
+                zlib1g-dev \
+                libncurses5-dev \
+                libgdbm-dev \
+                libnss3-dev \
+                libssl-dev \
+                libreadline-dev \
+                libffi-dev wget
+    apt install -y libbz2-dev  #  If installed before Python, will require a reinstallation of Python
+    wget https://www.python.org/ftp/python/3.7.12/Python-3.7.12.tar.xz
+    tar xvf Python-3.7.12.tar.xz 
+    cd Python-3.7.12
+    ./configure 
+    make install
+    pip3 install torch
+    pip3 install dgl==0.4.3post2  # future versions are not stable supports for dglke
+    pip3 install dglke
+#  See 'dglke_startup.md' for execution of DGLKE library
