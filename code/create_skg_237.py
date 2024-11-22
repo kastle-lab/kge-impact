@@ -75,7 +75,7 @@ def save_to_file(triples, filename):
             f.write(f"{triple[0]} {triple[1]} {triple[2]}\n")
 
 def main(centrality_file):
-    num_triples = 310116
+    num_triples = 310114
     num_relationships = 237
     num_entities = 14541
 
