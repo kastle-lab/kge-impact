@@ -1,0 +1,9 @@
+dizziness_from_beta_blockers	type	MedicationReactions
+low_white_blood_cell_count_from_chemotherapy	type	MedicationReactions
+Medication_Reactions	type	ToxicResponse
+yellowing_of_the_skin_jaundice	type	MedicationReactions
+vomiting_from_opioid_painkillers	type	MedicationReactions
+allergic_dermatitis	type	Allergies
+dust_allergy	type	Allergies
+high_blood_pressure_from_NSAIDs	type	MedicationReactions
+soy_allergy	type	Allergies

@@ -1,0 +1,8 @@
+egg_allergy	type	Allergies
+weight_gain_from_antipsychotics	type	MedicationReactions
+confusion_from_sedatives	type	MedicationReactions
+perfume_allergy	type	Allergies
+skin_rash	type	Allergies
+vision_problems_from_corticosteroids	type	MedicationReactions
+itching	type	Allergies
+hypoglycemia_from_insulin	type	MedicationReactions
