@@ -12,7 +12,7 @@ export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128
 
 # Define the common variables
 DATA_PATH="/home/w535axc/experiment/code"
-DATASET_BASE="synthetic_allergy-structure"
+DATASET_BASE="allergies"
 DATA_FILES="train.tsv valid.tsv test.tsv"
 FORMAT="raw_udd_hrt"
 
