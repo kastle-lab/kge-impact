@@ -1,0 +1,4 @@
+head    	relation    	tail				
+A       	hasFriend   	B				
+C       	hasFriend   	A				
+D       	hasFriend   	B				
