@@ -15,9 +15,9 @@ e.g.
 ```
 {
     "triple_string": {
-        "dataset_237": {"head": embedding[], "relation": embedding[], "tail": emebedding[]},
-        "dataset_238": {"head": embedding[], "relation": embedding[], "tail": emebedding[]},
-        "dataset_239": {"head": emebedding[], "relation": embedding[], "tail": emebedding[]},
+        "dataset_237": {"head": embedding[], "relation": embedding[], "tail": embedding[]},
+        "dataset_238": {"head": embedding[], "relation": embedding[], "tail": embedding[]},
+        "dataset_239": {"head": emebedding[], "relation": embedding[], "tail": embedding[]},
     },
     ...
 }
