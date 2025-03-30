@@ -23,6 +23,8 @@ e.g.
 }
 ```
 
+Note: the script is pointed to the ../dataset/ directory
+
 # save_drift_data.py
 save_drift_data.py calls generate_drift_data.py and saves the results to a json file named drift_data.json. The resulting filesize is quite large, 4.75GB - this is the file you'll want to run
 
