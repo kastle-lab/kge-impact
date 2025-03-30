@@ -34,4 +34,4 @@ To set pykeen to deterministic simply set random.seed() and torch.manual_seed() 
 This script compares the files outputted from grab_matrices.py and shows which are identical and which are different. 
 
 # visualization 
-Next step is hopefully to take the data and display it, unless tweaks to the generation step are needed.s
+Next step is hopefully to take the data and display it, unless tweaks to the generation step are needed.
