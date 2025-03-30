@@ -26,7 +26,9 @@ e.g.
 Note: the script is pointed to the ../dataset/ directory
 
 # save_drift_data.py
-save_drift_data.py calls generate_drift_data.py and saves the results to a json file named drift_data.json. The resulting filesize is quite large, 4.75GB - this is the file you'll want to run
+save_drift_data.py calls generate_drift_data.py and saves the results to a json file named drift_data.json. The resulting file size is quite large, 4.75GB 
+
+this (save_drift_data.py) is the file you'll want to run
 
 # grab_matrices.py
 This script is a demonstration of the deterministic behavior of pykeen when using a fixed seed by calling pipeline() on the 237 dataset with num_epochs=0. It then grabs the matrix and saves to a file. It then does the same thing except with num_epochs set to default.
