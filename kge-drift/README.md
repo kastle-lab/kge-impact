@@ -23,6 +23,8 @@ e.g.
 }
 ```
 
+Added an option to save as CSV which generates a file 1.51GB large
+
 Note: the script is pointed to the ../dataset/ directory
 
 # save_drift_data.py
