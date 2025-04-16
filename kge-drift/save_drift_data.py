@@ -1,7 +1,7 @@
 from generate_drift_data import generate_drift_data
 import pandas as pd
 import json
-##
+
 def save_drift_data():
 
     format_choice = input("Save drift data as (1) CSV or (2) JSON? Enter 1 or 2: ").strip()
