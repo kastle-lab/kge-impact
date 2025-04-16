@@ -45,19 +45,9 @@ Calculates the average euclidean distance between all head entity embeddings in 
 
 <img src = "./img/LatexADF.png" width = "380"></img>
 
+#### Output for 100 training epochs: <br><br>
 
-Output for 5 training epochs:
-
-| Comparison         | Mean Euclidean Drift | Standard Deviation  | 
-|--------------------|----------------------|---------------------|
-| **Δ₁ (237 vs 238)** | 0.680030             | 0.313747           | 
-| **Δ₂ (237 vs 239)** | 0.682184             | 0.313614           | 
-| **Δ₃ (238 vs 239)** | 0.439329             | 0.064016           |
-
-<br>
-<img src = "./img/drift_histogram_5_epochs.png" width = "650"></img>
-<br><br>
-Output for 100 training epochs: <br><br>
+#### Heads:
 
 | Comparison         | Mean Euclidean Drift | Standard Deviation  | 
 |--------------------|----------------------|---------------------|
@@ -66,5 +56,26 @@ Output for 100 training epochs: <br><br>
 | **Δ₃ (238 vs 239)** | 0.814815             | 0.130666           | 
 
 <br>
-<img src = "./img/drift_histogram_100_epochs.png" width = "650"></img>
+<img src = "./img/drift_histogram_heads.png" width = "650"></img>
 
+#### Tails:
+
+| Comparison         | Mean Euclidean Drift | Standard Deviation  | 
+|--------------------|----------------------|---------------------|
+| **Δ₁ (237 vs 238)** | 0.863759             | 0.146335           | 
+| **Δ₂ (237 vs 239)** | 0.865926             | 0.146631           |
+| **Δ₃ (238 vs 239)** | 0.769000             | 0.147069           | 
+
+<br>
+<img src = "./img/drift_histogram_tails.png" width = "650"></img>
+
+#### Relations:
+
+| Comparison         | Mean Euclidean Drift | Standard Deviation  | 
+|--------------------|----------------------|---------------------|
+| **Δ₁ (237 vs 238)** | 0.865690             | 0.402051           | 
+| **Δ₂ (237 vs 239)** | 0.861736             | 0.395032           |
+| **Δ₃ (238 vs 239)** | 0.759481             | 0.326970           | 
+
+<br>
+<img src = "./img/drift_histogram_relations.png" width = "650"></img>
