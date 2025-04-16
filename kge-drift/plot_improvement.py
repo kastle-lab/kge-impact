@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import os
-
+# Okay I could have done this a bit more cleanly but it was something of an afterthought
 # Create output directory if it doesn't exist
 os.makedirs("img", exist_ok=True)
 
