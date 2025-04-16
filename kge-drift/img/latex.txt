@@ -1,5 +1,5 @@
 
-\textbf{Average Distance Function: }\\
+\textbf{Average Paired Distance Function: }\\
 
 S_1 = \{ v^{(s_1)}_1, v^{(s_1)}_2,\dots,v^{(s_1)}_n \}\\ 
 S_2 = \{ v^{(s_2)}_1, v^{(s_2)}_2,\dots,v^{(s_2)}_n \}\\
@@ -8,11 +8,11 @@ S_2 = \{ v^{(s_2)}_1, v^{(s_2)}_2,\dots,v^{(s_2)}_n \}\\
 
 \\\\
 
-\text{A = set of vectors of head embeddings in dataset fb15k-237}^*\\
-\text{B = set of vectors of head embeddings in dataset fb15k-238}^*\\
-\text{C = set of vectors of head embeddings in dataset fb15k-239}^*\\
+\text{A = set of vector embeddings in dataset fb15k-237}^*\\
+\text{B = set of vector embeddings in dataset fb15k-238}^*\\
+\text{C = set of vector embeddings in dataset fb15k-239}^*\\
 
-\tiny ^*\text{minus the triples not present in (237 ∪ 238 ∪ 239) } \\\\
+\tiny ^*\text{minus the triples not present in (237 ∩ 238 ∩ 239) } \\\\
 
 
 \Delta_1 = \Delta_E(A,B)\\
