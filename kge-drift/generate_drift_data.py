@@ -46,6 +46,7 @@ def train_on_23x():
             validation=validation_factory,
             model="TransE",
             random_seed=seed,
+            training_kwargs=dict(num_epochs=100),  # 100 since run_pykeen defaults to that
         )
         
         result_array.append(result)
@@ -93,14 +94,16 @@ def get_embedding_drift_data(aligned_triples, result_array):
     Collect embeddings for aligned triples across datasets.
     
     Returns:
-    {
-        "triple_string": {
-            "dataset_237": {"head": np.array, "relation": np.array, "tail": np.array},
-            "dataset_238": {"head": np.array, "relation": np.array, "tail": np.array},
-            "dataset_239": {"head": np.array, "relation": np.array, "tail": np.array},
-        },
-        ...
-    }
+        ```
+        {
+            "triple_string": {
+                "dataset_237": {"head": embedding[], "relation": embedding[], "tail": emebedding[]},
+                "dataset_238": {"head": embedding[], "relation": embedding[], "tail": emebedding[]},
+                "dataset_239": {"head": emebedding[], "relation": embedding[], "tail": emebedding[]},
+            },
+            ...
+        }
+        ```
     """
     drift_data = {}
 
@@ -124,9 +127,11 @@ def get_embedding_drift_data(aligned_triples, result_array):
             r_id = label_to_id_rel[rel_str]
             t_id = label_to_id_ent[tail_str]
 
-            h_emb = entity_emb(torch.tensor(h_id)).detach().numpy()
-            r_emb = relation_emb(torch.tensor(r_id)).detach().numpy()
-            t_emb = entity_emb(torch.tensor(t_id)).detach().numpy()
+            device = next(result.model.parameters()).device
+
+            h_emb = entity_emb(torch.tensor(h_id).to(device)).detach().cpu().numpy()
+            r_emb = relation_emb(torch.tensor(r_id).to(device)).detach().cpu().numpy()
+            t_emb = entity_emb(torch.tensor(t_id).to(device)).detach().cpu().numpy()
 
             # Store in structured dictionary
             if triple_str not in drift_data:

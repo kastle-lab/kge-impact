@@ -1,0 +1,63 @@
+import ijson
+from scipy.spatial.distance import euclidean
+import statistics
+import matplotlib.pyplot as plt
+
+file_path = 'drift_data.json'
+
+# Store per-triple distances
+distances_1 = []  # between 237 and 238
+distances_2 = []  # between 237 and 239
+distances_3 = []  # between 238 and 239
+
+with open(file_path, 'r', encoding='utf-8') as f:
+    triples = ijson.kvitems(f, '')
+    
+    for triple_key, triple_data in triples:
+        try:
+            h237 = triple_data['dataset_237']['head']
+            h238 = triple_data['dataset_238']['head']
+            h239 = triple_data['dataset_239']['head']
+
+            distances_1.append(euclidean(h237, h238))
+            distances_2.append(euclidean(h237, h239))
+            distances_3.append(euclidean(h238, h239))
+
+        except KeyError as e:
+            print(f"Skipping {triple_key} due to missing key: {e}")
+
+# Compute average and standard deviation
+def summarize(distances):
+    return {
+        'mean': statistics.mean(distances),
+        'std_dev': statistics.stdev(distances)
+    }
+
+summary_1 = summarize(distances_1)
+summary_2 = summarize(distances_2)
+summary_3 = summarize(distances_3)
+
+# Output the results
+print("Δ₁ (237 vs 238):")
+print(f"  Mean Euclidean Drift: {summary_1['mean']:.6f}")
+print(f"  Std Dev:              {summary_1['std_dev']:.6f}\n")
+
+print("Δ₂ (237 vs 239):")
+print(f"  Mean Euclidean Drift: {summary_2['mean']:.6f}")
+print(f"  Std Dev:              {summary_2['std_dev']:.6f}\n")
+
+print("Δ₃ (238 vs 239):")
+print(f"  Mean Euclidean Drift: {summary_3['mean']:.6f}")
+print(f"  Std Dev:              {summary_3['std_dev']:.6f}")
+
+# Save histogram plot to file
+plt.figure(figsize=(10, 6))
+plt.hist(distances_1, bins=500, alpha=0.6, label='Δ₁ (237 vs 238)')
+plt.hist(distances_2, bins=500, alpha=0.6, label='Δ₂ (237 vs 239)')
+plt.hist(distances_3, bins=500, alpha=0.6, label='Δ₃ (238 vs 239)')
+plt.title('Euclidean Drift Distribution')
+plt.xlabel('Distance')
+plt.ylabel('Frequency')
+plt.legend()
+plt.tight_layout()
+plt.savefig('drift_histogram.png')

@@ -1,5 +1,3 @@
 *.sif
 .DS_Store
 kge-drift/__pycache__/
-kge-drift/drift_data.json
-kge-drift/drift_data.csv
