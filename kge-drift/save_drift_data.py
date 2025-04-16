@@ -1,24 +1,18 @@
 from generate_drift_data import generate_drift_data
 import pandas as pd
 import json
+import argparse
+import os
 
-def save_drift_data():
-
-    format_choice = input("Save drift data as (1) CSV or (2) JSON? Enter 1 or 2: ").strip()
-
-    if format_choice == "1":
-        filename = input("Enter CSV filename (default: drift_data.csv): ").strip() or "drift_data.csv"
-    elif format_choice == "2":
-        filename = input("Enter JSON filename (default: drift_data.json): ").strip() or "drift_data.json"
-    else:
-        print("Invalid input. Please run the script again and enter 1 or 2.")
-        return
-
-    print("Generating drift data...")
-    drift_data = generate_drift_data()
+def save_drift_data(format_choice="json", filename=None, num_epochs=100):
+    print(f"Generating drift data (epochs={num_epochs})...")
+    drift_data = generate_drift_data(num_epochs=num_epochs)
     print("Drift data obtained.")
 
-    if format_choice == "1":
+    if format_choice == "csv":
+        if filename is None:
+            filename = "drift_data.csv"
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
         print("Preparing data for CSV format...")
 
         rows = []
@@ -38,6 +32,9 @@ def save_drift_data():
         print(f"Drift data saved as CSV to {filename}")
 
     else:  # JSON
+        if filename is None:
+            filename = "drift_data.json"
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
         print("Preparing data for JSON format...")
 
         serializable_data = {
@@ -52,5 +49,12 @@ def save_drift_data():
             json.dump(serializable_data, f, indent=4)
         print(f"Drift data saved as JSON to {filename}")
 
-# Run the function
-save_drift_data()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Save drift data to CSV or JSON.")
+    parser.add_argument("--format", choices=["csv", "json"], default="json", help="Output format (json or csv).")
+    parser.add_argument("--filename", default=None, help="Output filename (default: drift_data.json or drift_data.csv).")
+    parser.add_argument("--epochs", type=int, default=100, help="Number of epochs to pass to generate_drift_data()")
+
+    args = parser.parse_args()
+    save_drift_data(format_choice=args.format, filename=args.filename, num_epochs=args.epochs)

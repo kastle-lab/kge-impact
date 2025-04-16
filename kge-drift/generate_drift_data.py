@@ -18,7 +18,7 @@ torch.manual_seed(seed)
 
 # function to train on each dataset and return an array of results
 # this might be a little bit clunky but it will work on the 237,8,9 datasets specifically
-def train_on_23x():
+def train_on_23x(num_epochs=100):
     
     # going to loop through the datasets and call pipeline() to train on each one
     # then push those results into an array
@@ -46,7 +46,7 @@ def train_on_23x():
             validation=validation_factory,
             model="TransE",
             random_seed=seed,
-            training_kwargs=dict(num_epochs=100),  # 100 since run_pykeen defaults to that
+            training_kwargs=dict(num_epochs=num_epochs),
         )
         
         result_array.append(result)
@@ -146,7 +146,7 @@ def get_embedding_drift_data(aligned_triples, result_array):
     return drift_data
 
 # uses the functions to get drift data
-def generate_drift_data():
+def generate_drift_data(num_epochs):
     """
     Runs the full pipeline:
     1. Trains models on datasets fb15k-237, fb15k-238, fb15k-239.
@@ -155,7 +155,7 @@ def generate_drift_data():
     4. Returns structured data for further analysis.
     """
     print("Step 1: Training models on datasets...")
-    results = train_on_23x()
+    results = train_on_23x(num_epochs)
     
     print("Step 2: Aligning triples across datasets...")
     aligned_triples = sort_results_into_correspondence(results)

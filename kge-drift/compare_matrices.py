@@ -3,7 +3,6 @@ import os
 from itertools import combinations
 
 # This script compares the matrices in the initial and trained folders and shows whichs ones are the same and which ones are different...
-# The results might make sense, if not, oh well
 
 # Define paths
 INITIAL_MATRICES_DIR = "./matrices_initial"

@@ -10,6 +10,8 @@ Developed using python version 3.11.11
 ### save_drift_data.py
 Calls generate_drift_data.py and saves the result to a json/csv file named drift_data.json/csv. The resulting file size is quite large, over 4GB (json) or 1.5GB (csv).
 
+Usage: `python save_drift_data.py [--format <json|csv>] [--filename <output file>] [--epochs <int>]`
+
 ### generate_drift_data.py
 Contains functions to train on each dataset and returns an object containing each triple which contain embeddings from each dataset `{ triple->dataset->head[], relation[], tail[] }` epochs set to 100.
 
@@ -42,9 +44,10 @@ This script compares the files outputted by grab_matrices.py and shows which are
 ### calc_drift.py 
 Calculates the average euclidean distance between embeddings of elements of triples shared across the datasets. 
 
-
 <img src = "./img/LatexADF.png" width = "380"></img>
 
+Usage: `python calc_drift.py [--filepath <path>] [--spo <head|relation|tail>] [--filename <output.png>]`
+<br>
 #### Output for 100 training epochs: <br><br>
 
 #### Heads:
@@ -56,7 +59,7 @@ Calculates the average euclidean distance between embeddings of elements of trip
 | **Δ₃ (238 vs 239)** | 0.814815             | 0.130666           | 
 
 <br>
-<img src = "./img/drift_histogram_heads.png" width = "650"></img>
+<img src = "./img/drift_histogram_heads_100epochs.png" width = "650"></img>
 
 #### Tails:
 
@@ -67,7 +70,7 @@ Calculates the average euclidean distance between embeddings of elements of trip
 | **Δ₃ (238 vs 239)** | 0.769000             | 0.147069           | 
 
 <br>
-<img src = "./img/drift_histogram_tails.png" width = "650"></img>
+<img src = "./img/drift_histogram_tails_100epochs.png" width = "650"></img>
 
 #### Relations:
 
@@ -78,4 +81,4 @@ Calculates the average euclidean distance between embeddings of elements of trip
 | **Δ₃ (238 vs 239)** | 0.759481             | 0.326970           | 
 
 <br>
-<img src = "./img/drift_histogram_relations.png" width = "650"></img>
+<img src = "./img/drift_histogram_relations_100epochs.png" width = "650"></img>
