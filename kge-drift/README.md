@@ -1,6 +1,5 @@
 # Comparing KG Embeddings
 
-
 This folder contains code to measure embedding drift between triples, using TransE with a fixed seed for reproducibility, on the FB15k-237, FB15k-238, and FB15k-239 datasets.
 
 Developed using python version 3.11.11
@@ -41,8 +40,16 @@ This script compares the files outputted by grab_matrices.py and shows which are
 
 ## Calculation and Visualization
 
+### run_drift_analysis.sh
+Pipeline generating data and plots given some number of training epochs.
+
+Usage: `./run_drift_analysis <n>`
+
 ### calc_drift.py 
-Calculates the average euclidean distance between embeddings of elements of triples shared across the datasets. 
+Computes the Average Paired Distance Function between embedding vectors for aligned triples shared across multiple knowledge graph datasets.
+
+Outputs results as a markdown file containing a table with the mean and standard deviation and a distribution plot
+
 
 <img src = "./img/LatexADF.png" width = "380"></img>
 
