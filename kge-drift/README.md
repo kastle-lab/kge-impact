@@ -40,7 +40,7 @@ This script compares the files outputted by grab_matrices.py and shows which are
 ## Calculation and Visualization
 
 ### calc_drift.py 
-Calculates the average euclidean distance between all head entity embeddings in triples shared across datasets. 
+Calculates the average euclidean distance between embeddings of elements of triples shared across the datasets. 
 
 
 <img src = "./img/LatexADF.png" width = "380"></img>
