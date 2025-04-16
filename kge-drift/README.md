@@ -23,7 +23,7 @@ e.g.
     "triple_string": {
         "dataset_237": {"head": embedding[], "relation": embedding[], "tail": embedding[]},
         "dataset_238": {"head": embedding[], "relation": embedding[], "tail": embedding[]},
-        "dataset_239": {"head": emebedding[], "relation": embedding[], "tail": embedding[]},
+        "dataset_239": {"head": embedding[], "relation": embedding[], "tail": embedding[]},
     },
     ...
 }
@@ -48,6 +48,32 @@ Calculates the average euclidean distance between embeddings of elements of trip
 
 Usage: `python calc_drift.py [--filepath <path>] [--spo <head|relation|tail>] [--filename <output.png>]`
 <br>
+
+#### Justifying Number of Training Epochs
+
+To illustrate the effect of training duration on embedding drift, the following plots were generated using **only 5 training epochs**. The head and tail distances appear to show bimodal distributions whereas for 100 epochs the distributions resemble a Gaussian distribution.
+
+<div style="display: flex; gap: 12px;">
+  <div style="flex: 1; text-align: center;">
+    <strong>Heads (5 epochs)</strong><br>
+    <a href="./img/drift_data_5epochs_head.png" target="_blank">
+      <img src="./img/drift_data_5epochs_head.png" width="100%">
+    </a>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <strong>Tails (5 epochs)</strong><br>
+    <a href="./img/drift_data_5epochs_tail.png" target="_blank">
+      <img src="./img/drift_data_5epochs_tail.png" width="100%">
+    </a>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <strong>Relations (5 epochs)</strong><br>
+    <a href="./img/drift_data_5epochs_relation.png" target="_blank">
+      <img src="./img/drift_data_5epochs_relation.png" width="100%">
+    </a>
+  </div>
+</div>
+
 #### Output for 100 training epochs: <br><br>
 
 #### Heads:
