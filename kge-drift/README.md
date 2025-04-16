@@ -48,7 +48,7 @@ Usage: `./run_drift_analysis <n>`
 ### calc_drift.py 
 Computes the Average Paired Distance Function between embedding vectors for aligned triples shared across multiple knowledge graph datasets.
 
-Outputs results as a markdown file containing a table with the mean and standard deviation and a distribution plot
+Outputs results as a markdown file containing a table with the mean and standard deviation and a distribution plot.
 
 
 <img src = "./img/LatexADF.png" width = "380"></img>
