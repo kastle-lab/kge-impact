@@ -58,7 +58,7 @@ Usage: `python calc_drift.py [--filepath <path>] [--spo <head|relation|tail>] [-
 
 ### Justifying Number of Training Epochs
 
-To illustrate the effect of training duration on embedding drift, the following plots were generated using **only 5 training epochs**. The head and tail distances appear to show bimodal distributions whereas for 100 epochs the distributions resemble a Gaussian distribution.
+To illustrate the effect of training duration on embedding drift, the following plots were generated using 5 and 100 training epochs. The head and tail distances appear to show bimodal distributions whereas for 100 epochs the distributions resemble a Gaussian distribution.
 
 <!-- Heads -->
 <table>
