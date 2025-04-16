@@ -12,7 +12,10 @@ def save_drift_data(format_choice="json", filename=None, num_epochs=100):
     if format_choice == "csv":
         if filename is None:
             filename = "drift_data.csv"
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        # ensure directory exists if path includes one
+        dir_path = os.path.dirname(filename)
+        if dir_path:
+            os.makedirs(dir_path, exist_ok=True)
         print("Preparing data for CSV format...")
 
         rows = []
@@ -34,7 +37,10 @@ def save_drift_data(format_choice="json", filename=None, num_epochs=100):
     else:  # JSON
         if filename is None:
             filename = "drift_data.json"
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        # ensure directory exists if path includes one
+        dir_path = os.path.dirname(filename)
+        if dir_path:
+            os.makedirs(dir_path, exist_ok=True)
         print("Preparing data for JSON format...")
 
         serializable_data = {

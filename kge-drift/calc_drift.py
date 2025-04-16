@@ -2,6 +2,8 @@ import ijson
 from scipy.spatial.distance import euclidean
 import statistics
 import matplotlib.pyplot as plt
+import os
+import argparse  # added for CLI args
 
 # calculates the drift between entities and standard deviation and outputs a plot
 # file_path: the path to the input file (drift_data)
@@ -11,6 +13,16 @@ import matplotlib.pyplot as plt
 
 def calc_drft(file_path, spo_term, output_filename=None):
     
+    if output_filename is None:
+        output_filename = f"drift_histogram_{spo_term}.png"  # fixed typo (was using undefined 'element')
+
+    # ensure directory exists if path includes one
+    dir_path = os.path.dirname(output_filename)
+    if dir_path:
+        os.makedirs(dir_path, exist_ok=True)
+
+    print(f"Saving plot to: {output_filename}")
+    
     if spo_term == 'subject':
         spo_term = 'head'
         
@@ -19,9 +31,6 @@ def calc_drft(file_path, spo_term, output_filename=None):
         
     if spo_term == 'object':
         spo_term = 'tail'
-        
-    if output_filename is None:
-        output_filename = f'drift_histogram_{spo_term}.png'
         
     # store per-triple distances
     distances_1 = []  # between 237 and 238
@@ -88,4 +97,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    calc_drft(file_path=args.filepath, element=args.spo, output_filename=args.filename)
+    calc_drft(file_path=args.filepath, spo_term=args.spo, output_filename=args.filename)  # fixed 'element' → 'spo_term'
