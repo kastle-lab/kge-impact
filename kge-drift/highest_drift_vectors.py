@@ -41,12 +41,22 @@ def calc_top10_drift(file_path, output_dir="./output"):
             if not drift_set:
                 continue
 
-            drift_set.sort(key=lambda x: x[1])
+            drift_set.sort(key=lambda x: x[1])  # sort by drift value ascending
 
-            lowest_10 = drift_set[:10]
-            highest_10 = drift_set[-10:]
+            # Carefully select lowest 10
+            seen = set()
+            lowest_10 = []
+            for label, value in drift_set:
+                if label not in seen:
+                    lowest_10.append((label, value))
+                    seen.add(label)
+                if len(lowest_10) == 10:
+                    break
 
-            # Plotting
+            highest_10 = drift_set[-10:]  # highest 10 normally
+
+            # --- Plotting Functions ---
+
             def plot_bar(data, title_suffix, filename_suffix):
                 labels = [label for label, _ in data]
                 values = [value for _, value in data]
@@ -64,8 +74,35 @@ def calc_top10_drift(file_path, output_dir="./output"):
 
                 print(f"Saved plot: {save_path}")
 
+            def plot_bar(data, title_suffix, filename_suffix):
+                labels = [label for label, _ in data]
+                values = [value for _, value in data]
+
+                plt.figure(figsize=(12, 6))
+                bars = plt.bar(labels, values)
+
+                plt.xticks(rotation=45, ha='right', fontsize=8)
+                plt.ylabel('Drift Amount (Euclidean Distance)')
+                plt.title(f"Top 10 {title_suffix} ({spo_term.capitalize()}s)")
+                plt.tight_layout()
+
+                # Add drift value above each bar
+                for bar, value in zip(bars, values):
+                    height = bar.get_height()
+                    plt.text(bar.get_x() + bar.get_width() / 2, height, f"{value:.4f}", 
+                            ha='center', va='bottom', fontsize=7, rotation=90)
+
+                save_path = os.path.join(output_dir, f"{spo_term}_{filename_suffix}.png")
+                plt.savefig(save_path)
+                plt.close()
+
+                print(f"Saved plot: {save_path}")
+
+
+            # --- Actually plot now ---
             plot_bar(lowest_10, f"Lowest Drift {name}", f"{name}_lowest_{spo_term}")
             plot_bar(highest_10, f"Highest Drift {name}", f"{name}_highest_{spo_term}")
+            plot_line(drift_set, name)  # plot full distribution too
 
 
 if __name__ == "__main__":
