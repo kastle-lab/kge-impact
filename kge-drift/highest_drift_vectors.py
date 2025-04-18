@@ -4,10 +4,52 @@ import matplotlib.pyplot as plt
 import ijson
 from scipy.spatial.distance import euclidean
 
-
 def calc_top10_drift(file_path, output_dir="./output"):
     os.makedirs(output_dir, exist_ok=True)
 
+    def plot_bar(data, title_suffix, filename_suffix, spo_term):
+        labels = [label for label, _ in data]
+        values = [value for _, value in data]
+
+        plt.figure(figsize=(12, 6))
+        bars = plt.bar(labels, values)
+
+        plt.xticks(rotation=45, ha='right', fontsize=8)
+        plt.ylabel('Drift Amount (Euclidean Distance)')
+        plt.title(f"Top 10 {title_suffix} ({spo_term.capitalize()}s)")
+        plt.tight_layout()
+
+        # Add drift value above each bar
+        for bar, value in zip(bars, values):
+            height = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width() / 2, height, f"{value:.4f}", 
+                     ha='center', va='bottom', fontsize=7, rotation=90)
+
+        save_path = os.path.join(output_dir, f"{spo_term}_{filename_suffix}.png")
+        plt.savefig(save_path)
+        plt.close()
+
+        print(f"Saved plot: {save_path}")
+
+    def plot_line(data, filename_suffix, spo_term):
+        sorted_data = sorted(data, key=lambda x: x[1])
+        labels = [label for label, _ in sorted_data]
+        values = [value for _, value in sorted_data]
+
+        plt.figure(figsize=(14, 6))
+        plt.plot(range(len(values)), values, marker='o', markersize=2, linewidth=1)
+        plt.xlabel('Entity Index (sorted by drift)')
+        plt.ylabel('Drift Amount (Euclidean Distance)')
+        plt.title(f"Drift Distribution: {filename_suffix} ({spo_term.capitalize()}s)")
+        plt.tight_layout()
+
+        save_path = os.path.join(output_dir, f"{spo_term}_{filename_suffix}_line.png")
+        plt.savefig(save_path)
+        plt.close()
+
+        print(f"Saved line plot: {save_path}")
+
+    # Now start processing normally
     for spo_term in ["head", "tail"]:
         print(f"Processing: {spo_term}s")
 
@@ -29,7 +71,7 @@ def calc_top10_drift(file_path, output_dir="./output"):
                     elif spo_term == 'tail':
                         label = parts[2]
                     else:
-                        continue  # just in case
+                        continue
 
                     drift_1.append((label, euclidean(h237, h238)))
                     drift_2.append((label, euclidean(h237, h239)))
@@ -41,7 +83,7 @@ def calc_top10_drift(file_path, output_dir="./output"):
             if not drift_set:
                 continue
 
-            drift_set.sort(key=lambda x: x[1])  # sort by drift value ascending
+            drift_set.sort(key=lambda x: x[1])
 
             # Carefully select lowest 10
             seen = set()
@@ -53,57 +95,12 @@ def calc_top10_drift(file_path, output_dir="./output"):
                 if len(lowest_10) == 10:
                     break
 
-            highest_10 = drift_set[-10:]  # highest 10 normally
+            highest_10 = drift_set[-10:]
 
-            # --- Plotting Functions ---
-
-            def plot_bar(data, title_suffix, filename_suffix):
-                labels = [label for label, _ in data]
-                values = [value for _, value in data]
-
-                plt.figure(figsize=(12, 6))
-                plt.bar(labels, values)
-                plt.xticks(rotation=45, ha='right', fontsize=8)
-                plt.ylabel('Drift Amount (Euclidean Distance)')
-                plt.title(f"Top 10 {title_suffix} ({spo_term.capitalize()}s)")
-                plt.tight_layout()
-
-                save_path = os.path.join(output_dir, f"{spo_term}_{filename_suffix}.png")
-                plt.savefig(save_path)
-                plt.close()
-
-                print(f"Saved plot: {save_path}")
-
-            def plot_bar(data, title_suffix, filename_suffix):
-                labels = [label for label, _ in data]
-                values = [value for _, value in data]
-
-                plt.figure(figsize=(12, 6))
-                bars = plt.bar(labels, values)
-
-                plt.xticks(rotation=45, ha='right', fontsize=8)
-                plt.ylabel('Drift Amount (Euclidean Distance)')
-                plt.title(f"Top 10 {title_suffix} ({spo_term.capitalize()}s)")
-                plt.tight_layout()
-
-                # Add drift value above each bar
-                for bar, value in zip(bars, values):
-                    height = bar.get_height()
-                    plt.text(bar.get_x() + bar.get_width() / 2, height, f"{value:.4f}", 
-                            ha='center', va='bottom', fontsize=7, rotation=90)
-
-                save_path = os.path.join(output_dir, f"{spo_term}_{filename_suffix}.png")
-                plt.savefig(save_path)
-                plt.close()
-
-                print(f"Saved plot: {save_path}")
-
-
-            # --- Actually plot now ---
-            plot_bar(lowest_10, f"Lowest Drift {name}", f"{name}_lowest_{spo_term}")
-            plot_bar(highest_10, f"Highest Drift {name}", f"{name}_highest_{spo_term}")
-            plot_line(drift_set, name)  # plot full distribution too
-
+            # Actually plot now
+            plot_bar(lowest_10, f"Lowest Drift {name}", f"{name}_lowest_{spo_term}", spo_term)
+            plot_bar(highest_10, f"Highest Drift {name}", f"{name}_highest_{spo_term}", spo_term)
+            plot_line(drift_set, name, spo_term)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate and plot top 10 drifts for heads and tails.")
