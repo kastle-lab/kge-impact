@@ -23,7 +23,7 @@ def calc_top10_drift(file_path, output_dir="./output"):
                     h238 = triple_data['dataset_238'][spo_term]
                     h239 = triple_data['dataset_239'][spo_term]
 
-                    parts = triple_key.split('\\t')
+                    parts = triple_key.split('\t')
                     if spo_term == 'head':
                         label = parts[0]
                     elif spo_term == 'tail':
