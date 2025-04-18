@@ -86,14 +86,8 @@ def calc_top10_drift(file_path, output_dir="./output"):
             drift_set.sort(key=lambda x: x[1])
 
             # Carefully select lowest 10
-            seen = set()
-            lowest_10 = []
-            for label, value in drift_set:
-                if label not in seen:
-                    lowest_10.append((label, value))
-                    seen.add(label)
-                if len(lowest_10) == 10:
-                    break
+            lowest_10 = drift_set[:10]
+
 
             highest_10 = drift_set[-10:]
 
