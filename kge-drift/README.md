@@ -239,7 +239,7 @@ Bar graphs showing the top 10 drifted heads and tails for each comparison.
 
 <table>
   <tr>
-    <th colspan="2" style="text-align:left;">Top 30 Drift: FB15k-237 vs FB15k-238</th>
+    <th colspan="2" style="text-align:left;">Top 10 Drift: FB15k-237 vs FB15k-238</th>
   </tr>
   <tr>
     <td align="center" width="50%">
@@ -257,7 +257,7 @@ Bar graphs showing the top 10 drifted heads and tails for each comparison.
 
 <table>
   <tr>
-    <th colspan="2" style="text-align:left;">Top 30 Drift: FB15k-237 vs FB15k-239</th>
+    <th colspan="2" style="text-align:left;">Top 10 Drift: FB15k-237 vs FB15k-239</th>
   </tr>
   <tr>
     <td align="center" width="50%">
@@ -275,7 +275,7 @@ Bar graphs showing the top 10 drifted heads and tails for each comparison.
 
 <table>
   <tr>
-    <th colspan="2" style="text-align:left;">Top 30 Drift: FB15k-238 vs FB15k-239</th>
+    <th colspan="2" style="text-align:left;">Top 10 Drift: FB15k-238 vs FB15k-239</th>
   </tr>
   <tr>
     <td align="center" width="50%">
