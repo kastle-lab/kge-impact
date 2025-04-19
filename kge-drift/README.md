@@ -297,24 +297,16 @@ Plotting drift on the vertical axis on a sorted list of drift distances.
 
 <table>
   <tr>
-    <th style="text-align:left;">Drift Distribution Line Plot: FB15k-237 vs FB15k-238 (Heads)</th>
+    <th colspan="2" style="text-align:left;">Drift Distribution Line Plots: FB15k-237 vs FB15k-238</th>
   </tr>
   <tr>
-    <td align="center" width="100%">
+    <td align="center" width="50%">
+      <strong>Heads</strong><br>
       <img src="./img/topdrift/head_237_vs_238_line.png" width="100%">
     </td>
-  </tr>
-</table>
-
-<br>
-
-<table>
-  <tr>
-    <th style="text-align:left;">Drift Distribution Line Plot: FB15k-237 vs FB15k-239 (Heads)</th>
-  </tr>
-  <tr>
-    <td align="center" width="100%">
-      <img src="./img/topdrift/head_237_vs_239_line.png" width="100%">
+    <td align="center" width="50%">
+      <strong>Tails</strong><br>
+      <img src="./img/topdrift/tail_237_vs_238_line.png" width="100%">
     </td>
   </tr>
 </table>
@@ -323,11 +315,34 @@ Plotting drift on the vertical axis on a sorted list of drift distances.
 
 <table>
   <tr>
-    <th style="text-align:left;">Drift Distribution Line Plot: FB15k-238 vs FB15k-239 (Heads)</th>
+    <th colspan="2" style="text-align:left;">Drift Distribution Line Plots: FB15k-237 vs FB15k-239</th>
   </tr>
   <tr>
-    <td align="center" width="100%">
+    <td align="center" width="50%">
+      <strong>Heads</strong><br>
+      <img src="./img/topdrift/head_237_vs_239_line.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Tails</strong><br>
+      <img src="./img/topdrift/tail_237_vs_239_line.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:left;">Drift Distribution Line Plots: FB15k-238 vs FB15k-239</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Heads</strong><br>
       <img src="./img/topdrift/head_238_vs_239_line.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Tails</strong><br>
+      <img src="./img/topdrift/tail_238_vs_239_line.png" width="100%">
     </td>
   </tr>
 </table>
