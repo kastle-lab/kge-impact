@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import ijson
 from scipy.spatial.distance import euclidean
 
-def calc_top10_drift(file_path, output_dir="./output", spo_term):
+def calc_top10_drift(file_path, output_dir="./output"):
     os.makedirs(output_dir, exist_ok=True)
 
     def plot_bar(data, title_suffix, filename_suffix, spo_term):
@@ -48,7 +48,7 @@ def calc_top10_drift(file_path, output_dir="./output", spo_term):
         plt.close()
 
         print(f"Saved line plot: {save_path}")
-
+    spo_term = "tail"
     # Now start processing normally
     print(f"Processing: {spo_term}s")
 
@@ -84,11 +84,18 @@ def calc_top10_drift(file_path, output_dir="./output", spo_term):
         if not drift_set:
             continue
 
-        highest_10 = sorted(drift_set, key=lambda x: x[1], reverse=True)[:30]
+        unique_drift = {}
+        for label, value in drift_set:
+            if label not in unique_drift or value > unique_drift[label]:
+                unique_drift[label] = value
+        drift_set = list(unique_drift.items())
+
+        highest_10 = sorted(drift_set, key=lambda x: x[1], reverse=True)[:10]
 
         # Actually plot now
         plot_bar(highest_10, f"Highest Drift {name}", f"{name}_highest_{spo_term}", spo_term)
         plot_line(drift_set, name, spo_term)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate and plot top 10 drifts for heads and tails.")
