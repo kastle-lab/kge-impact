@@ -14,7 +14,7 @@ Usage: `python save_drift_data.py [--format <json|csv>] [--filename <output file
 ### generate_drift_data.py
 Contains functions to train on each dataset and returns an object containing each triple which contain embeddings from each dataset `{ triple->dataset->head[], relation[], tail[] }`
 
-The embeddings present in the final result represent triples that exist in all three datasets: T<sub>n</sub> ∈ 237 ∩ 238 ∩ 239.
+The embeddings present in the final result represent triples from 237, which trivialy exist in the intersection all three datasets: T<sub>n</sub> ∈ 237 ∩ 238 ∩ 239, due to the nested subset relationship 237 ⊆ 238 ⊆ 239.
 
 e.g.
 ```
@@ -50,8 +50,7 @@ Computes the Average Paired Distance Function between embedding vectors for alig
 
 Outputs results as a markdown file containing a table with the mean and standard deviation and a distribution plot.
 
-
-<img src = "./img/LatexADF.png" width = "380"></img>
+<!--<img src = "./img/LatexADF.png" width = "380"></img>-->
 
 Usage: `python calc_drift.py [--filepath <path>] [--spo <head|relation|tail>] [--filename <output.png>]`
 <br>
