@@ -223,23 +223,23 @@ Data and plots for each run can be found in the `img/` directory.
 </table>
 
 <!-- Heads and Tails top drifters -->
-### Top 10 Drifted Heads and Tails
-Bar graphs showing the top 10 drifted heads and tails for each comparison. 
-
+### Top 10 Drifted Heads and Tails  
+Bar graphs showing the top and bottom 10 drifted heads and tails for each comparison.  
 100 Epochs used in the training step.
 
+<!-- Top Drift -->
 <table>
   <tr>
-    <th colspan="2" style="text-align:left;">Top 10 Drift: FB15k-237 vs FB15k-238</th>
+    <th colspan="2" style="text-align:left;">Top 10 Highest Drift: FB15k-237 vs FB15k-238</th>
   </tr>
   <tr>
     <td align="center" width="50%">
       <strong>Heads</strong><br>
-      <img src="./img/topdrift/head_237_vs_238_highest_head.png" width="100%">
+      <img src="./output/head_wikidata_237_vs_238_highest_top.png" width="100%">
     </td>
     <td align="center" width="50%">
       <strong>Tails</strong><br>
-      <img src="./img/topdrift/tail_237_vs_238_highest_tail.png" width="100%">
+      <img src="./output/tail_wikidata_237_vs_238_highest_top.png" width="100%">
     </td>
   </tr>
 </table>
@@ -248,16 +248,16 @@ Bar graphs showing the top 10 drifted heads and tails for each comparison.
 
 <table>
   <tr>
-    <th colspan="2" style="text-align:left;">Top 10 Drift: FB15k-237 vs FB15k-239</th>
+    <th colspan="2" style="text-align:left;">Top 10 Highest Drift: FB15k-237 vs FB15k-239</th>
   </tr>
   <tr>
     <td align="center" width="50%">
       <strong>Heads</strong><br>
-      <img src="./img/topdrift/head_237_vs_239_highest_head.png" width="100%">
+      <img src="./output/head_wikidata_237_vs_239_highest_top.png" width="100%">
     </td>
     <td align="center" width="50%">
       <strong>Tails</strong><br>
-      <img src="./img/topdrift/tail_237_vs_239_highest_tail.png" width="100%">
+      <img src="./output/tail_wikidata_237_vs_239_highest_top.png" width="100%">
     </td>
   </tr>
 </table>
@@ -266,16 +266,72 @@ Bar graphs showing the top 10 drifted heads and tails for each comparison.
 
 <table>
   <tr>
-    <th colspan="2" style="text-align:left;">Top 10 Drift: FB15k-238 vs FB15k-239</th>
+    <th colspan="2" style="text-align:left;">Top 10 Highest Drift: FB15k-238 vs FB15k-239</th>
   </tr>
   <tr>
     <td align="center" width="50%">
       <strong>Heads</strong><br>
-      <img src="./img/topdrift/head_238_vs_239_highest_head.png" width="100%">
+      <img src="./output/head_wikidata_238_vs_239_highest_top.png" width="100%">
     </td>
     <td align="center" width="50%">
       <strong>Tails</strong><br>
-      <img src="./img/topdrift/tail_238_vs_239_highest_tail.png" width="100%">
+      <img src="./output/tail_wikidata_238_vs_239_highest_top.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<!-- Lowest Drift -->
+<br><br>
+### Bottom 10 Drifted Heads and Tails
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:left;">Bottom 10 Drift: FB15k-237 vs FB15k-238</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Heads</strong><br>
+      <img src="./output/head_wikidata_237_vs_238_lowest_bottom.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Tails</strong><br>
+      <img src="./output/tail_wikidata_237_vs_238_lowest_bottom.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:left;">Bottom 10 Drift: FB15k-237 vs FB15k-239</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Heads</strong><br>
+      <img src="./output/head_wikidata_237_vs_239_lowest_bottom.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Tails</strong><br>
+      <img src="./output/tail_wikidata_237_vs_239_lowest_bottom.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:left;">Bottom 10 Drift: FB15k-238 vs FB15k-239</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Heads</strong><br>
+      <img src="./output/head_wikidata_238_vs_239_lowest_bottom.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Tails</strong><br>
+      <img src="./output/tail_wikidata_238_vs_239_lowest_bottom.png" width="100%">
     </td>
   </tr>
 </table>
