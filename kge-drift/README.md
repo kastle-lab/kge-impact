@@ -33,10 +33,10 @@ Note: the script is pointed to the `../dataset/` directory.
 ## Deterministic Training
 
 ### grab_matrices.py
-Runs pipeline() on the 237 dataset with num_epochs=0. It then grabs the model and saves to a file. It then does the same thing except with num_epochs set to default. To make pykeen deterministic set random.seed() and torch.manual_seed() to any number.
+Runs pipeline() on the 237 dataset with num_epochs=0. It then grabs the model and saves to a file. It then does the same thing except with num_epochs set to default. To make pykeen deterministic set random.seed() and torch.manual_seed() to any number. This script was written to test if fixing the seed makes the training behavior determinsitic.
 
 ### compare_matrices.py
-This script compares the files outputted by grab_matrices.py and shows which are identical and which are different. The resultant parameters are always the same for any given number of training epochs demonstrating deterministic behavior.
+This script compares the files outputted by grab_matrices.py and shows which are identical and which are different. The resultant parameters are always the same for any given number of training epochs demonstrating deterministic behavior demonstrating that deterministic behavior has been achieved. 
 
 ## Calculation and Visualization
 
